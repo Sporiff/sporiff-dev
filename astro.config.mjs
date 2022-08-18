@@ -8,7 +8,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   integrations: [tailwind(), mdx(), sitemap()],
   output: 'static',
-  site: 'https://sporiff.netlify.com',
+  site: 'https://sporiff.dev',
   markdown: {
     syntaxHighlight: 'prism'
   },
