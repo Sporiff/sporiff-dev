@@ -1,6 +1,7 @@
 import rss from '@astrojs/rss';
 
 export const get = () => rss({
+    stylesheet: '/rss/styles.xsl',
     // `<title>` field in output xml
     title: 'Sporiff.dev',
     // `<description>` field in output xml
