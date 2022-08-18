@@ -1,0 +1,55 @@
+---
+layout: ./src/layouts/Post.astro
+title: weeabot
+date: 2019-07-06T23:00:00.000Z
+tags: tech, chat, communication, rust
+image:  https://rootkey.fra1.cdn.digitaloceanspaces.com/images/post_images/weeabot.webp
+summary: So I've been having some fun recently trying to teach myself Rust I'm not really a programmer by any stretch of the imagination (yet!) but was challenged to write a bot for a Matrix chatroom I frequent. Most of us have written bots already, so it was my time to try something.
+---
+
+![A screenshot of Weeabot][weeabot]
+
+So I've been having some fun recently trying to teach myself [Rust][rust]. I'm not really a programmer by any stretch of the imagination (yet!) but was challenged to write a bot for a Matrix chatroom I frequent. Most of us have written bots already, so it was my time to try something.
+
+Originally I had planned to use Python like I had done previously for my Mastodon bot, [tsukumogami][tsukumogami] However, I'd been hearing some interesting things about Rust and decided it would be a fun challenge to try and write something functional in the language.
+
+## Features
+
+Weeabot's current features include the following:
+
+- The ability to convert romaji to kana
+- The ability to convert kana to romaji
+- The ability to translate a string to a given
+  language using Yandex translate
+- Various silly responses to triggers
+
+Of these the Yandex call was definitely the hardest to get right. I had originally hoped to use a crate for this, but [the one I found][ytr] unfortunately didn't compile due to depending on old crates which had an old OpenSSL version. After spending some time trying to write the call myself I realised it was easier to fix the crate and use it anyway. I've since [presented this fix][ytr-pull] to the original maintainer, so hopefully it will be usable again soon.
+
+## Some observations
+
+Rust is a challenging language for a newcomer as it is very strict about getting things right before compilation. This is the right thing to do, and thankfully the compiler is excellent at giving instruction on what is wrong and possible ways to fix it. But unlike Python (which really is a pick-up-and-play language in many ways), Rust really does not want you to run something that is broken.
+
+Rust is also probably the wrong language for this project. While there is a nice ready-made [matrix_bot_api crate][matrix-bot-api], it is clear that the language is designed for more complex stuff than this. I would probably have had an easier time using a more web-oriented language. Originally the challenge had been to use [Dlang][dlang], but I was much more interested in Rust.
+
+## Some fun stuff
+
+So far I've learned a lot not just about Rust but also about Matrix, APIs, and deployment pipelines. As a joke, this bot (which essentially just posts shitposts that pastiche typical weeaboo-esque responses) has been set up with a fully functional test environment and pipeline for test, build, and deployment to a live server. This was an interesting challenge as I have previously understood bits and pieces about the process from my interactions with Netlify and Funkwhale, but have never set it up for myself before.
+
+Another fun thing has been getting to play with [Crates][crates]. Crates are amazingly helpful in giving you a good starting point to build from and feel much more convenient to me than Python libs. Most of this bot is just different crates stuck together, although I have actually pushed a fix for the yandex translation crate I used. So I'm not just a leech!
+
+Anyway, the source code for the bot can be found on my [GitHub][weeabot-source]. There are still some features I want to get working, but I'm pretty happy with its performance thus far as a translation bot alone.
+
+{/*Images*/}
+
+[weeabot]: https://rootkey.fra1.cdn.digitaloceanspaces.com/images/post_images/weeabot.webp
+
+{/*External links*/}
+
+[crates]: https://crates.io
+[dlang]: https://dlang.org
+[matrix-bot-api]: https://docs.rs/matrix_bot_api/0.4.0/matrix_bot_api/
+[rust]: https://rust-lang.org
+[tsukumogami]: https://github.com/Sporiff/tsukumogami
+[weeabot-source]: https://github.com/Sporiff/weeabot
+[ytr]: https://crates.io/crates/ytr
+[ytr-pull]: https://github.com/ilunev/ytr/pull/1

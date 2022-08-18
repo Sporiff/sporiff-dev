@@ -1,0 +1,28 @@
+---
+layout: ./src/layouts/Post.astro
+title: Goodbye, Guix
+date: 2019-02-04T23:00:00.000Z
+tag: guix, guixsd, gnu, linux
+summary: So for the last few weeks I've been exclusively using GuixSD on my X200s. It's been an interesting experiment, and there are a good many things I really liked about the system. For now, though, I am going back to Parabola.
+---
+
+## A fond farewell
+
+So for the last few weeks I've been exclusively using [GuixSD][guix] on my X200s. It's been an interesting experiment, and there are a good many things I really liked about the system. For now, though, I am going back to Parabola.
+
+## Guix
+
+For those who don't know, GNU Guix is a package manager which makes use of Guile to offer a really hackable and minutely controllable software management experience. GuixSD is a GNU/Linux-Libre distro based on this package manager, making use of Guile Scheme all the way down to the system configuration to make your build entirely reproducible. It's a very interesting experience, not without its challenges, and one that I would certainly be interested in trying again in future.
+
+## Why leave?
+
+Essentially, GuixSD is still very much beta software. Important meta packages don't yet work right, certain DEs are unfinished and buggy, and quite frequently I would find my computer simply crapping out on me and shutting down entirely. Since this machine is really just a hacking machine, I wasn't too bothered for the most part, but I decided I'd rather have the stability of a well-known system until Guix reaches maturity.
+
+I also had issues wrapping my head around parts of Guix administration. Due to the immutable nature of Guix stores, it is not possible to edit stores or files once they are built. This means that the quick edits and on-the-fly changes of config files need to instead be carefully thought-out and planned, lest you find yourself spending time rebuilding and reconfiguring. For all of Arch/Parabola's flaws, very little configuration is needed once you get it set up.
+
+So for now I'm back on Parabola running [LARBS][larbs], which is still my favourite GNU/Linux experience. I'm pretty comfortable and don't see a need to change. However, I'm still going to watch Guix keenly to see how it progresses.
+
+{/*External links*/}
+
+[guix]: https://gnu.org/software/guix
+[larbs]: https://larbs.xyz

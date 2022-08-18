@@ -1,0 +1,60 @@
+---
+layout: ./src/layouts/Post.astro
+title: Deploying and controlling Google Chrome settings using Microsoft Intune
+date: 2018-07-26T23:00:00.000Z
+tags: tech, microsoft, azure, chrome, intune
+summary: Righto. This one has given me a mild headache for the last couple of days, but I've found a workable solution that allows me to set a home page for users in Chrome. You would have thought that would be really easy, right? Well, Google in its infinite wisdom has decided that conventional Windows management is for wusses. So down the rabbit hole we go.
+---
+
+Righto. This one has given me a mild headache for the last couple of days, but I've found a workable solution that allows me to set a home page for users in Chrome. You would have thought that would be really easy, right? Well, Google in its infinite wisdom has decided that conventional Windows management is for wusses. So down the rabbit hole we go.
+
+## Ingesting ADMX templates
+
+Let us say, for the sake of argument, that you have deployed the Chrome Enterprise `.msi` to your devices either during a build or using Intune. Now you want to control some of the settings for your users in order to provide a consistent experience. If you look around online, you'll see various references to ingesting ADMX templates and leveraging these for using with Chrome. This looks something like this:
+
+```text
+# Create an OMA-URI to import your ADMX template
+* ./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/Chrome/Policy/ChromeADMX}
+* Data Type = String
+* Value = the whole body of the Chrome ADMX template
+# Leverage policies from within this template using nested OMA-URI settings
+* ./Device/Vendor/MSFT/Policy/Config/Chrome~Policy~googlechrome/ShowHomeButton
+* Data Type = String
+* Value = <enabled/>
+```
+
+Pretty simple stuff. This allows us to show the home button. Tickedy boo. So what about setting the home page and landing pages for users? Well, unfortunately, this isn't possible.
+
+When you use the CSP settings to load and edit the GPO locally, Chrome detects that the computer is not connected to an on-prem AD, and will ignore certain settings including but not limited to your custom home page. Bum gravy. This is mentioned in some capacity in [this thread][chromium-gp-bug] and in [this advisory][homepage-location], but it's far from a satisfactory explanation in an Azure AD connected world.
+
+## What is a boy to do?
+
+So here's the dilemma. I know that another way to control Chrome is using a file called `master_preferences` located in the `C:\Program Files (x86)\Google\Chrome\Application` folder, so for future deployments it would be entirely possible to simply place this in the image. However, we have nearly 60 devices already out in the world due to the unreal pressure we've been under to deliver, so I need a remote deployment method.
+
+First option is to use Powershell. Powershell could easily be pointed at a publicly accessible Azure blob containing the `master_preferences` file. The problem with this is that Powershell scripts can only be targeted at users, which would mean that in the long run we would not be able to set different preferences on different types of machines.
+
+So, what about a `.msi` file? I got this idea in my head to package the file up as an application, which would give us the power not only to deploy per device but also to supersede if we ever want to make changes to the config. The two tools I used to achieve this were [NSIS][nsis] and the free version of [exemsi][exemsi]. The steps are as follows:
+
+- Edit your `master_preferences` file to reflect the changes you want to make
+- Place the file in a zip archive
+- Run NSIS and select "Installer based on ZIP file"
+- Select your ZIP file, give the installer a suitable name, and set the"Default Folder" value to `C:\Program Files (x86)\Google\Chrome\Application`
+- Hit "Generate" and locate your newly created `.exe` file
+- Next, open up exemsi and click "Next" to start the wizard
+- Select your newly created executable and change the `.msi` name if desired
+- In the installer options, select "Per Machine" under "MSI installation context". This is required to allow you to deploy to devices as opposed to users. If users are your targets, set this to "Per User"
+- Give your application and ID and generate an Upgrade Code. This will allow you to uninstall and supersede if needs be, so keep a note of it and use the same code for any new iterations. Intune will notify you if the codes do not match
+- Enter some information about the product including the name, the manufacturer, and the version number
+- Optionally, set up contact links
+- For install and uninstall arguments, use the flag `/S` (make sure this is capital). This is the standard NSIS silent install flag
+- There is no need to enter any before/after command lines
+- Hit "Build" at the end and it will generate a `.msi`
+
+After this, upload your `.msi` to Intune, deploy it to a test group, and watch the magic happen. Please note that you cannot deploy the ADMX template and the `master_preferences` file at the same time as the two conflict with one another.
+
+{/*External links*/}
+
+[chromium-gp-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=433112
+[exemsi]: https://www.exemsi.com/download/
+[homepage-location]: https://www.chromium.org/administrators/policy-list-3#HomepageLocation
+[nsis]: http://nsis.sourceforge.net/Download

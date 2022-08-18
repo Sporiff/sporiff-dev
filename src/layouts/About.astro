@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../style/main.css";
+const { content } = Astro.props;
+---
+
+<Layout title={`sporiff.dev- ${content.title}`}>
+  <main>
+    <article>
+      <h1 class="font-bold">{content.title}</h1>
+      <section class="flex flex-wrap justify-center">
+        <div
+          class="w-full max-w-sm bg-neutral-100 dark:bg-neutral-700 rounded-lg border border-gray-200 shadow-md dark:border-gray-700"
+        >
+          <div class="flex justify-end px-4 pt-4 p-6"></div>
+          <div class="flex flex-col items-center pb-10">
+            <img
+              class="mb-3 w-24 h-24 rounded-full shadow-lg"
+              src="https://rootkey.fra1.cdn.digitaloceanspaces.com/images/avatar.webp"
+              alt="A pixel art representation of me"
+            />
+            <p class="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+              Ciarán Ainsworth
+            </p>
+            <span class="text-sm text-gray-900 dark:text-white"
+              >Technical writer
+            </span>
+            <div class="flex mt-4 space-x-3 md:mt-6">
+              <a href="mailto:ciaranainsworth@gmail.com">
+                <button
+                  class="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >Email
+                </button>
+              </a>
+              <a href="https://twitter.com/thatdapperbrit">
+                <button
+                  class="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >Twitter
+                </button>
+              </a>
+              <a href="https://mastodon.technology/@cda">
+                <button
+                  class="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >Mastodon
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <slot />
+    </article>
+  </main>
+</Layout>

@@ -1,0 +1,80 @@
+---
+layout: ./src/layouts/Post.astro
+title: Into the Void
+date: 2019-06-08T23:00:00.000Z
+tags: blog, tech, linux, computer
+image: https://rootkey.fra1.cdn.digitaloceanspaces.com/images/post_images/void.webp
+---
+
+Ever heard of [Void Linux][void-homepage]? Me neither until a little while ago. My friend had originally introduced me to Void when I was looking at going back to Arch Linux a few years ago, stating that it was (in many ways) a vastly superior system. I was intrigued, but I ultimately ended up sticking with Arch as I was familiar with it and was unwilling to give up on using the AUR at that point.
+
+Fast forward to a few years later and I'm back in the market for a new distro to try out. My Librebooted X200s was running Debian testing happily, but I was unhappy with the sheer amount of resource the system was taking to run given the machine's relatively limited capabilities. This was largely due to running GNOME, a DE which I used to have a very low opinion of until recent releases made it a much more pleasant experience. So I decided to give a tiling WM a try once more.
+
+Initially I was going to go straight back to Parabola running [LARBS][larbs] (which, as I've previously stated, is my favourite computing experience thus far), but since the creator of LARBS had recently been testing a new ricing script for Void I decided it was a good opportunity to give the distro a try.
+
+## Installation
+
+The installation of Void Linux is surprisingly simple. I was using a terminal-based installation, but the wizard is still easy enough for a relatively inexperienced user to follow. As with most installations of this type, disk partitioning is the most difficult bit to nail. Once you get this, however, the system boots without complaint and remembers everything you had set up, which is still something I find pretty neat. YMMV as I'm sure the myriad GUI installs are even easier, but suffice to say this was not as difficult an install as some.
+
+`xbps` is Void's homegrown package manager. It functions somewhat similarly to `pacman`, with the distinction of using multiple commands rather than just using flags.
+
+### Updating the system
+
+```bash
+# Pacman
+sudo pacman -Su
+# xbps
+sudo xbps-install -Su
+```
+
+### Installing a package
+
+```bash
+# Pacman
+sudo pacman -S <package-name>
+# xbps
+sudo xbps-install -S <package-name>
+```
+
+### Removing a package
+
+```bash
+# Pacman
+sudo pacman -R <package-name>
+# xbps
+sudo xbps-remove <package-name>
+```
+
+As you can see, the two are syntactically very similar, but `xbps` is not actually a valid command, which takes some getting used to. In addition, you have to make sure to run `xbps-install -Su` multiple times after the system is first installed in order to get everything synced properly.
+
+Setting up the rest of the machine was largely achieved using LARBS, so there wasn't much to get wrong. Just download and run the script and the defaults should take over. Again, YMMV depending on what setup you're going for. The installer will take care of the DE and other general programs, but for the sake of minimalism I decided not to go with that.
+
+## Performance
+
+Void is pretty quick. It boots a lot faster than Parabola/Arch in my limited experience with it, taking about 6 seconds from initial boot to login screen, and DWM is capable of running pretty much everything I need with very little resource. To this point, the highest I've managed to push the memory is around about 500MB with 10 surf windows, Weechat, and various other terminal programs running. Mostly it hovers around 200MB, which is crazy impressive.
+
+![Void Linux running on my laptop][void]
+
+Managing services with Runit is also really straightforward. Programs with daemon capabilities get added to a directory and enabling them as a service is a simple matter of symlinking the daemon programs to the Runit directory. This means it's incredibly easy to make your own services with just a few scripts. Is it any easier than systemd? Not really. It's definitely lighter, but it remains to be seen if it is as robust in day-to-day usage. I can honestly say I haven't missed any of systemd's 900 billion features at this point, so in terms of a laptop setup systemd is proving to be largely overkill.
+
+## Packages
+
+As is possibly expected, Void's package selection is limited. Many distros with established package managers can get away with a limited first-party repository as the rest of the packages will be provided elsewhere, but with Void being the only distro (that I know of) using `xbps`, it's really up to them to provide packages of everything. All of the most important stuff seems to be accounted for, and most of the time the free software I want to install can be easily obtained, however there are a few notable omissions which need to be obtained elsewhere. This isn't really a problem since you can simply install `guix` and use it alongside `xbps` for package management.
+
+Other package formats such as `appimage` seem to run perfectly fine, while things like `snap` are simply not going to work due to `snapd`'s ludicrous hard dependency on systemd. I've not bothered with `flatpak` yet as I've not had a need to yet, but it is included in the repos so it's good to know it's there as a fallback (although given that I'm aiming for a minimal system I'm going to try to avoid it).
+
+`xbps` also comes with an additional option called `xbps-src`, which is offered as a script in a [git repo][void-packages]. While `xbps-install` will install binary versions of software from Void's repos, `xbps-src` allows the user to save the source of these packages and build them from source locally instead. Using a git repo to sync these packages feel pretty natural, and the idea of having the option to build from binary or source in a supported way is pretty neat. `xbps-src` also gives the user the option to package software themselves using `xtools` to generate templates, which should make it easy for developers to make their software available through `xbps` in future.
+
+## Final thoughts
+
+I have to say I really, _really_ like Void Linux. I wouldn't say it's on par with Arch Linux for me yet, but I will say it's one of the most solid options out there for anybody looking for a minimal or systemd-free distro. It recalls for me my first experiences using the venerable Slackware, with many of the choices that are usually made for me being put back to me but in an easy-to-configure way. The system's lightweight feel (largely achieved through dwm I'm sure), the simplicity of the init system, and the surprising robustness of the package manager makes this a distro I'm really glad to have tried. I'll probably stick with it for a little while and see how it treats my little Librebox.
+
+{/*Images*/}
+
+[void]: https://rootkey.fra1.cdn.digitaloceanspaces.com/images/post_images/void.webp
+
+{/*External links*/}
+
+[larbs]: https://larbs.xyz
+[void-homepage]: https://voidlinux.org
+[void-packages]: https://github.com/void-linux/void-packages

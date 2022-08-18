@@ -1,0 +1,39 @@
+---
+layout: ./src/layouts/Post.astro
+title: Baku Social
+date: 2018-12-21T23:00:00.000Z
+tags: mastodon, social, tech, federation
+summary: I've been looking for a project recently to teach me some more about various technologies, specifically public cloud stuff like AWS and container tech like Docker.
+---
+
+I've been looking for a project recently to teach me some more about various technologies, specifically public cloud stuff like AWS and container tech like Docker. I have been looking to get into this stuff for a little while and even previously hosted on of my blogs on a container OS, but that was shortlived due to too many headaches with Wordpress containers. For the last few months I had also been looking for a way to replace Spotify – which I had left behind due to privacy concerns, costs, and library limitations (I listen to some… weird stuff). So when I heard about [Funkwhale][funkwhale] I decided this would be a good opportunity to give the whole Docker/Cloud thing a go.
+
+## A rocky start
+
+Initially I opted to run the entire setup in AWS with an EC2 server and additional storage to host media files. This went well to begin with; setting up the server, DNS, and access to the service was very simple. I ran the site for a couple of days on this setup before realising that costs would quickly spiral out of hand. While AWS is fantastic for large-scale applications and deployments, it's not great for smaller projects with lower specs. The storage and network costs would quickly grow beyond what I was comfortable spending, and so I decided to call it a day with EC2 and fall back to my tried and true: Digital Ocean.
+
+I opted originally to run a $40/month VPS with 8GB RAM, 4 cores, and 160GB SSD. This seemed logical seeing as I was going to be hosting media files on the server. At the time, I had placed my entire uncompressed library on the server, so it was taking up about 100GB of space just to host the files. This didn't bother me too much as the server spec included a lot of bandwidth as well, so I plowed ahead. I got nginx up-and-running, set Docker up successfully, and was easily able to listen to music out of the Funkwhale app. Very nice.
+
+But this server is… expensive. And very powerful.
+
+My biggest mistake in this move was picking a high-power VPS for its disk size rather than more sensibly choosing a less powerful machine and attaching an additional disk to it. As such I was now stuck with a whole lot of server hosting, well, my music library and nothing else. I didn't really have the room to add more music in future, and the server was too powerful to just have one Docker container running on it.
+
+My solution? Find another project of course! I have been a longtime user of [Mastodon][mastodon], having moved away from sites like Twitter and Tumblr a while back due to toxicity and privacy concerns (again). While I was happy enough using [Fosstodon][fosstodon] and [Mastodon.technology][mastodon.technology] before, I was keen to start my own instance dedicated to Japanese mythology (my first true love). With the idea in mind, I looked up the guides and — after a few teething issues — had an instance running successfully.
+
+Around this time I decided that I probably needed to downsize everything. The server was still too powerful and I had been stupid in my allocation of storage. So I decided to spin up a smaller VPS with half the power and a 100GB dedicated drive, compress all of my music, and migrate the whole thing over. After a brief conversation with the Funkwhale dev I was able to get the media root changed and have all music switched over to the external drive. Bonza.
+
+## The end result
+
+The two federated instances are now successfully up-and-running. The Mastodon instance is Baku Social and the Funkwhale is [Tanuki Tunes][tanukitunes]. I'm still monitoring the server, S3 storage, and general performance to see if the setup I've chosen is right, but so far I'm not seeing any particular issues coming up. All seems to be smooth sailing. I guess my big challenge will be managing upgrades and downtime, but I'm yet to experience migrating to a new release.
+
+These two projects are currently being managed, hosted, and paid for entirely by me. I don't mind this too much as I'm currently the only one using the services so they're basically just my personal playing ground. However, I have also set up a [Patreon][patreon] and a [Liberapay][liberapay] to help cover costs should other people want to make use of the services.
+
+{/*External links*/}
+
+[fosstodon]: https://fosstodon.org
+[funkwhale]: https://funkwhale.audio
+[liberapay]: https://liberapay.com/CiaranAinsworth
+[mastodon]: https://joinmastodon.org
+[mastodon.technology]: https://mastodon.technology
+[patreon]: https://patreon.com/CiaranAinsworth
+[tanukitunes]: https://tanukitunes.com

@@ -1,0 +1,49 @@
+---
+layout: ./src/layouts/Post.astro
+title: Playing with ports
+date: 2020-02-10T21:38:36.000Z
+tags: FreeBSD, unix, floss, free software, ports, lisp, roswell
+summary: I've recently been playing around with FreeBSD on one of my laptops. Why? Boredom, frankly.
+---
+
+import { YouTube } from 'astro-embed';
+
+![The FreeBSD logo][freebsd]
+
+As mentioned in my [previous post][moving-to-freebsd], I've recently been playing around with FreeBSD on one of my laptops. Why? Boredom, frankly. Boredom with my job, boredom with my lack of social life, boredom with the weather. Whatever the cause, the cure is always computer fun!
+
+If you've ever used FreeBSD you're probably already well aware of the ports system. It's the thing that scares people because you mentioned the dreaded "S" word
+
+> Oh, yeah. I usually build that from source to be honest
+>
+> You WHAT
+
+I'll admit to being more of a binary package man myself (my time is… well not valuable. But still ticking away!) and I only very rarely dip into the ports tree when a binary doesn't exist or is a long way out of date. But there is a lot of comfort having it there as a backup.
+
+One piece of software I use quite frequently is [Roswell][roswell], a lisp implementation/installation manager. It's what I use to install and manage [coleslaw][coleslaw] (you know, that thing that powers this website). Now, being a spoiled boy from the good side of town over with that Void and Arch bunch, I'm used to having Roswell nicely packaged up for me to install at the tippety tap of my fingers. On FreeBSD, this package is unfortunately missing. Ho hum. No worries, thinks I, I'll just install it from source and move on with my life.
+
+But I got to thinking: how hard _is_ it to actually make a port for something? Looking through the rather excellently written [Porter's handbook][porters-handbook] it _looked_ simple enough, especially since Roswell is essentially a good old fashioned `./configure && make && make install` jobby. So I started poking around at it and seeing if I could make sense of the syntax and the logic behind it.
+
+After a few hours of plugging, it looked like I had something usable. It took a bit of swearing and messing up my `Makefile` (don't believe everything `portlint` tells you, he's a fibber that one), but eventually I could get it successfully installing, deinstalling, configuring with a PREFIX, and, well, behaving like a package should.
+
+I've had a crack at packaging before with `.deb` and guix. It's always come across as the single most maddening thing in the world to me, so pernickety and demanding for something that should be so simple. Writing the port, on the other hand, was relatively straightforward. You tell it what is required, pass it some special instructions, and just let the standard tools take over from there. This form factor, coupled with the quality of the documentation made this a much less frustrating (and much more rewarding) packaging experience. Granted, I picked a very simple thing to start with. These things get harder logarithmically.
+
+Anyhow, since it worked for me I decided to actually submit the thing upstream and see if it's good enough to be included.
+
+Only time will tell.
+
+<YouTube id="Z8alr_XJ0co" />
+
+{/*Images*/}
+
+[freebsd]: https://rootkey.fra1.cdn.digitaloceanspaces.com/images/post_images/freebsd-logo.webp
+
+{/*Article links*/}
+
+[moving-to-freebsd]: ./moving-to-freebsd
+
+{/*External links*/}
+
+[coleslaw]: https://github.com/coleslaw-org/coleslaw
+[porters-handbook]: https://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/
+[roswell]: https://github.com/roswell/roswell

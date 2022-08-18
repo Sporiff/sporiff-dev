@@ -1,0 +1,13 @@
+---
+export interface Props {
+	author: string;
+   link: string;
+}
+
+const { author, link } = Astro.props as Props;
+---
+
+<blockquote>
+   <slot />
+   <cite><a href={link}>{author}</a></cite>
+</blockquote>

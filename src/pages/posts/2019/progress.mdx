@@ -1,0 +1,40 @@
+---
+layout: ./src/layouts/Post.astro
+title: Progress
+date: 2019-02-11T23:00:00.000Z
+tags: funkwhale, blog, personal
+summary: It feels good to actually have a positive impact on something. One of my biggest gripes about working in support is that you are – as a support agent – inevitably the face of disappoinment and/or failure at some point…
+---
+
+## Making a difference
+
+It feels good to actually have a positive impact on something. One of my biggest gripes about working in support is that you are – as a support agent – inevitably the face of disappoinment and/or failure at some point. The job is time and attention demanding, and sometimes you simply have to tell someone that things they want are not possible.
+
+This is devastating for morale. It's something I've seen in all my support jobs: the tickets keep coming and all you can do is try to answer them all in SLA. It's a hosepipe of negativity which can really get you down after a period of time. Occassionally, you'll get to the bottom of a particularly nasty problem and really make somebody's day better. For the most part, though, it's a thankless job with a lot of disappointment and no real goals to work towards.
+
+## Turn it around
+
+In my previous roles I have tried to find pragmatic and practical ways to lessen the negativity of the support role by using my unique frontline position to directly address the gripes and grievances of customers and coworkers alike. During my time as a frontline hardware repair worker/desktop support agent I spent all my spare time automating small tasks to try and take some of the pain away from the mundane, everyday jobs. I took this approach with me when I was promoted to systems technician, using my newfound access to simplify and automate many of the things which had caused me misery on the frontline so that it _never_ had to be that bad again.
+
+My current role is slightly different. For the first time in my professional career I am working in a company that _makes_ something, which means that every decision and project has to be worth something to the product as a whole. No more frittering away idle hours on support desk trying to fix bits and pieces. The changes have to have a tangible impact.
+
+One of the reasons I landed this job was because of my background in English, as well as my background as a technical writer and creator of documentation in my previous roles. As such, I was asked to look at the company's help center, which is (still) in need of some updates. As each day passed I started to pick up on something from the tickets:
+
+_Nobody_ read our documentation.
+
+We have a lot of documents, mind you. I can't expect every client to read every one. But the fact that the same issues came up again and again said to me that something fundamentally needed to change. The documents were obviously not clear or were frustrating to navigate. Similarly, no centralised process existed to write documentation nor a central place to put it.
+
+Since I am a big fan of markup languages like Markdown and reStructuredText, I decided to make use of Markdown when writing documents for my own ease, from which I would then copy the pure HTML to put into our document store to be formatted directly by CSS so that when the time came for a redesign, everything could be changed in one fell swoop. I started storing all of these markdown files with their corresponding HTML in a folder structure that reflected the current layout of the help centre. And that's when I realised how we could fix it.
+
+## You Git
+
+I use Git for a lot of things. I write small projects, I contribute to some open-source projects, and I host this website on Github. It is an elegant way to control large numbers of changing parts in a controlled and centralised way. Given that much of what I write goes through Git, I started to put together a proposal for making use of our repository to host documentation. This way – I reasoned – we would have a portable document set which could easily be recovered elsewhere, a set which had perfect revision history and the potential to put in requirements for submission, and a way to work both on and offline with no issues.
+
+The biggest bugbear we have at the moment is screenshots. Because the software evolves so rapidly (and will only get faster) keeping screenshots up-to-date is arduous. We have to open each document on Zendesk and manually replace the image. Rinse and repeat. To remedy this, I decided we should use Amazon S3 (which hosts a lot of our stuff already) and keep static links to files which could be swapped out whenever a new version was ready.
+
+Having been given the go-ahead by the CTO, I am currently in the process of porting and rewriting our entire document store. It will take a long time, but I'm hoping that it will have the following effects:
+
+1. Customers will be more likely to use our nice-looking and accurate documents
+2. Writing documents will naturally become part of our workflow regardless of what part of the company we work in
+
+Here's hoping!

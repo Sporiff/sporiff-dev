@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../style/main.css";
+import { simpleDate } from "../lib";
+const { content } = Astro.props;
+---
+
+<Layout title={`sporiff.dev- ${content.title}`}>
+  <main>
+    <article>
+      <h1 class="font-bold">{content.title}</h1>
+      <p class="pt-0 mb-5">{simpleDate(content.date)}</p>
+      <slot />
+    </article>
+  </main>
+</Layout>

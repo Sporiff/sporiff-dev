@@ -1,0 +1,77 @@
+---
+layout: ./src/layouts/Post.astro
+title: Elementary OS Juno
+date: 2018-10-22T23:00:00.000Z
+tags: gnu, linux, elementary, distro
+summary: I like Elementary OS. It does plenty right and offers a minimalist system with decent keyboard control, a healthy environment which encourages users to invest in developers, and it largely keeps out of my way while offering the power of Ubuntu under the hood.
+---
+
+import Note from './src/components/Note.astro';
+
+<Note>
+I have contributed translations to the Elementary OS project and have been an active Patreon supporter since April 2018. I don't think of myself as particularly biased, but it's best to mention these things
+</Note>
+
+## Summary (for those who don't want to read)
+
+I like Elementary OS. It does plenty right and offers a minimalist system with decent keyboard control, a healthy environment which encourages users to invest in developers, and it largely keeps out of my way while offering the power of Ubuntu under the hood. The system is not without its bugs (which I expect to see ironed out as reports come in), and there is still a little _too_ much in the system for my liking personally. However, the vision of Elementary has been realised no clearer than in this release. I won't be covering everything in this post, just some initial thoughts and reactions. See [the official release notes for a better technical rundown][release-notes].
+
+## The main meat
+
+In [an earlier post][thermy] I expressed my preferences in a desktop operating system: simplicity, lightweight operation, and easy customisation. It may surprise some (and not surprise others) that I am a big fan of [Elementary OS][elementary]. Though the project is vastly different from the barebones and stripped-back OS I prefer, I have a lot of respect for the "Elementary Vision" and have actively participated in its community as a patron and translator for the past year. They recently released their fifth official version, Juno. This is not an in-depth review, but more a cursory glance at the latest version of this system as a returning user.
+
+### Installation Process
+
+As one might imagine, installation of Elementary is as simple as most desktop-oriented GNU/Linux distros these days. Plug in a live USB, choose to install, and follow the instructions. Given that I was coming from an Arch Linux install, this process was quick and easy. It took about 15 minutes from start to finish and at the end (though I had to initially remember to unset the nouveau modeset) I was able to boot into the system with no issues. Quick, easy, unobtrusive, as expected really.
+
+I was slightly surprised to see the Ubuntu installer being used as I seem to remember some blog posts about improving the installer to push people towards disk encryption, but apparently while this has been added to Pop! OS it's still not in Elementary. Strange.
+
+### Pantheon
+
+Everybody who has looked around the GNU/Linux distro landscape in recent years has probably come across Pantheon at some point. They most likely thought "oh hey that looks like macOS". Indeed it does. It's a lot more eye candy than I'm used to. However, as somebody who works with macOS a lot, let me tell you now that I much prefer the way Pantheon works.
+
+Unlike macOS, which has an interface which constantly begs for the user's attention, Elementary OS' Pantheon knows to stay the hell out of the way when the user is trying to do something. Screen real-estate is kept relatively free and interactions with the desktop part of the system are kept to a minimum so you can focus on _doing what you need to do_.
+
+Juno has had a lot of work put into keyboard controls using super key commands. As you probably know, I'm a massive fan of this way of working. The super key brings up a list of keyboard shortcuts by default, which will be really helpful (I hope) in convincing more people to join the keyboard master race.
+
+Virtual desktops really leave a lot to be desired still for me. By default, two desktops exist: the first is the active desktop and the second is a blank. Hitting super + left/right will take you between these two, but until you add apps to the second screen you cannot add a new desktop. Hitting super + down reveals all windows and desktops, allowing for easy rearrangement, but this whole feature feels far too much like macOS for my liking. Being able to preset a number of blank desktops for easy navigation is preferable. Once the desktops are generated you can move between them easily using Super + Number. Still that damned animation, though. Fortunately, this can be turned off along with _all other animations_ in the accessibilty panel. See, Apple? _That's_ how you do it!
+
+Window tiling has seen vast improvements in this release with good, easy to control snapping and resizing. This is a very welcome addition. However, the snapping animations can be a little buggy when trying to move windows from left to right. The animation wants to follow a nice cycle of left, fullscreen, right. This is a minor nitpick, but I would want this much "snappier".
+
+Notifications have also seen a few improvements (particularly in sound design), but by far my favourite thing thus far has been the ability to alter the type of notification per application. This is really handy for when you have apps which demand your attention (Mail) and ones which really do not need to be making noise when an event happens (Music). It's a little thing, but I've found Juno to be full of little things that make a difference. They have, as they say, [chosen all the door handles in the house][architect-handles].
+
+The Elementary team has also won my heart with their inclusion of dark themes in many system apps, including the newly introduced Code (previously Scratch) in which I am writing this post now. It's a decent IDE. I would recommend giving it a try. In dark mode, of course. And speaking of Code…
+
+### Applications
+
+Probably my favourite thing about Elementary OS vs. most other distros is their attempt to encourage the funding of developers. This is a somewhat controversial opinion, I think, as many people don't like feeling "guilted" into paying money when the software _could_ be free. However, as somebody who cannot code to save their life, I am happiest when I can invest a small amount of money as a thanks to developers who continue to make my life easier. Elementary puts this idea first and foremost in their AppCenter, which offers a pay-what-you-want feature on certain Elementary-specific applications. One gripe I do have with this is their attempt to enforce the paying of developers by disabling the ability to bulk-update for feature releases if you haven't paid for the software. Not only does this feel a little restrictive, the fact that the store does not store what purchases have been made means I will now have to purchase certain apps _again_ in order to have them bulk update. Seems a little premature.
+
+The system apps follow a nice design pattern, with everything that comes with the system feeling like it belongs there. I am a little disappointed that the dark theme hasn't found its way into more of the Elementary core apps, however. I feel like a dark theme would really complement mail and music. For now though, everything definitely feels like it belongs and despite a few exceptions such as communication apps I've found little need to step beyond the core, which is exactly what I want in an OS. No I don't care about office software. I have Vim and Code to write LaTeX and Markdown.
+
+On this note, I have to go back to Code for a minute. There are some upsides and downsides to Elementary Code. The major downside is that the removal of Scratch leaves users with no standard plain text editor, which will lead many needing to download Gedit or an equivalent. But Code itself is a really promising program. A simple enough IDE with nice look and feel, the addition of extensions such as Vim keystroke emulation (hallelujah!) and web previewing make this feel like a really comfy app to sit in and hack on. I know Linux hackers are picky about their IDEs, and Code is nowhere near as extensible as the venerable Emacs or Vim, but I still feel like giving praise where it's due here.
+
+A personal experience I just wanted to include here: I downloaded a [Hacker News][hacker-news] reader made for Elementary called [HackUp][hackup]. I was pretty impressed, but disappointed in the lack of a dark theme. I left a feature request on the project's GitHub and by the next day the dark theme was implemented. Well worth the $3 any day.
+
+This not only speaks to the developer community into which Elementary is investing, but also to the clarity and conciseness of the system's UI guides and stylesheets. If an app is made for Elementary OS, it is _made_ for Elementary OS. Many people would see this as a bad thing, but I'm not really that bothered provided the software is free. You can always fork and tweak if you want to.
+
+### Overall
+
+I personally feel that Juno is a big step up from Loki and a huge step forward for the Elementary team. The OS feels very polished (despite a few bugs, which I'm hoping to see ironed out fairly soon) and it has a cohesive design the likes of which cannot reliably be found in many other distros. Software support is good, the system is small and unobtrusive, and the addition of a payment system for developers is a welcome addition.
+
+Is this OS for everyone? Absolutely not. No Linux distro can possibly be for everyone. That's kind of the beauty of it.
+
+Never forget that Windows is the result of an operating system trying to be all things to all people; it simply does not work and ends up pleasing very few. Elementary OS knows its audience and it knows what to focus on in order to reach that audience. It feels like a system with a coherent vision and goal, and if that matches up with your ideal it's a really good place to start.
+
+Oh, and the British English translations are truly excellent. Hats off to whomever did those.
+
+{/*Article links*/}
+
+[thermy]: "thermy.md"
+
+{/*External links*/}
+
+[architect-handles]: https://eu.usatoday.com/story/life/2015/07/12/designer-real-estate-home-decoration/30047291/
+[elementary]: https://elementary.io
+[hacker-news]: https://news.ycombinator.com
+[hackup]: https://github.com/mdh34/hackup
+[release-notes]: https://medium.com/elementaryos/elementary-os-5-juno-is-here-471dfdedc7b3

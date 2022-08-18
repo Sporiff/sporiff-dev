@@ -1,0 +1,58 @@
+---
+layout: ./src/layouts/Post.astro
+title: PGP problems promise pounding headaches
+date: 2018-05-13T23:00:00.000Z
+tags: tech, efail, pgp, mail, security, email, gnupg
+summary: At the moment, information on this flaw is scarce, so as always it’s best to wait until the paper is published. However, there are some things we can clear up from the start.
+---
+
+import { Tweet } from 'astro-embed';
+
+## Let’s clear up some FUD
+
+At the moment, information on this flaw is scarce, so as always it’s best to wait until the paper is published (which EFF says will be done at 07:00 UTC on May 15th). However, there are some things we can clear up from the start.
+
+Firstly, it does not look like this is a flaw with PGP itself, but rather with implementations of GPG used in email programs such as Enigmail. Both GPG and PGP remain cryptographically sound from what is being said by security experts, so there’s no need to worry that the sky is falling down. The official GPG Twitter account tweeted the following message:
+
+<Tweet id="995931083584757760" />
+
+But as always, it is best to wait for the whitepaper to be released.
+
+Secondly, it’s getting rather irksome that researchers are announcing these vulnerabilities without actually giving the public enough information to work with. EFF, TheHackerNews, and the researchers who broke the story are sending people into a panic with a seemingly hyperbolic description of the issue. Details will be released tomorrow, they say, so why not wait until tomorrow to break the story? Sure, they tell people to stop using email plugins for GPG and switch to Signal, but if this [thread on the GPG mailing list][gpg-mailing-list] is to be believed, there really is no need to do so if users stop using HTML emails or follow precautions such as using authenticated encryption and a MIME parser. This sort of information is much better than telling everybody to cease using the product because everything they’ve ever done with it is fundamentally broken.
+
+## The real issue here
+
+Let’s face it: PGP email sucks. From the information available today, it looks as though the issues are mostly being caused by insane defaults in email plugins, or by a user’s misuse of the system (for which there should be no room by design). As I say at the beginning of this post, there are still vestigial strongholds of PGP emails in some industries, but if this whole debacle is any indication of how things are going with it, clearly these systems are too difficult for the average user to use properly.
+
+CSO Online is keeping up-to-date with the issue on their blog, and have given a far better breakdown of the issue than I can. At this point, all we can do is wait for tomorrow and see what the responsible parties have to say on the matter. I would say, however, that this disclosure has been handled atrociously. There has already been far too much panic over something which has an unknown impact, and perhaps has already been mitigated in some circumstances.
+
+<Tweet id="995929684750815233" />
+
+The researchers seem keen to keep the matter under wraps until the release of the whitepaper, so it will be interesting to see what has been missed out come tomorrow.
+
+<Tweet id="995936859980222464" />
+
+### Update
+
+[The whitepaper and further details have now been published][efail]. As we all know, it's not a vulnerability until it has a website a cute logo.
+
+Security researcher Matthew Green has started a thread on Twitter detailling some of his thoughts on the attack. It's very much worth a read and he does an excellent job of breaking down the vulnerability into layman's terms.
+
+<Tweet id="995989254143606789" />
+
+Essentially, it looks as though the vulnerability allows attackers to modify encrypted email and add malicious HTML code to it, which is then executed on the receiver's computer, allowing the text of the email to be sent to remote servers. This is quite a glaring problem, and seems to be on the part of the email plugins not detecting the attack and failing to act on it rather than the protocol itself being broken.
+
+<Tweet id="995993446283382784" />
+
+The thread goes on to elaborate that PGP is less an issue here than S/MIME, a more widely used protocol which is also vulnerable to attack. This should really have been the meat of the story, as PGP is largely used by a small subset of people while S/MIME is trusted in a lot of critical environments.
+
+This whole (dreadfully handled) debacle needs to be taken as a wake-up call to the fact that **email is an inherently insecure and outdated technology**. People scoff when told to use E2EE messengers, but the fact remains that these apps are made for the modern world and are not stuck in the past in the same way as email is. GPG email is an incredibly old idea that has been shoehorned in to desktop mail programs (which themselves have questionable security when compared to their web counterparts), and is one that really needs to be addressed. Email is more important today than perhaps ever before: it's your digital home address, your online home. There needs to be a conversation about increasing security without trying to use overly complex systems such as PGP. And no, [making a Tutanota-styled encrypted message for Gmail is not a solution][gmail-security].
+
+Until the least technically competent among us can use encryption fluently and without frustration, there will be no security at all. Signal and iMessage have both managed to address this problem expertly, providing strong encryption without letting the user see any of the underlying complexity. We have to remember that the average user of technology is [stupid][users-stupid], and that it is on developers and technology experts to make sure they are protected without having to jump through ridiculous hoops.
+
+{/*External links*/}
+
+[efail]: https://efail.de/
+[gmail-security]: https://www.theregister.co.uk/2018/04/16/google_gmail_security/
+[gpg-mailing-list]: https://lists.gnupg.org/pipermail/gnupg-users/2018-May/060315.html
+[users-stupid]: https://www.over-yonder.net/~fullermd/rants/winstupid/1

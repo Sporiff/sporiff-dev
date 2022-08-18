@@ -1,0 +1,1 @@
+export const simpleDate = (date: String) => date.split('T')[0];

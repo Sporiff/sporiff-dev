@@ -1,0 +1,70 @@
+---
+layout: ./src/layouts/Post.astro
+title: Working with the M1 mac
+date: 2021-04-11T23:34:16.000Z
+tags: apple, mac, m1
+summary: At my company's request, I have purchased a MacBook Pro with the Apple M1 chip.
+---
+
+import { Tweet } from 'astro-embed';
+
+After a bit of faffing around with invoicing and reimbursing, I have finally managed to get ahold of a machine specifically for work. At my company's request, I have purchased a MacBook Pro with the Apple M1 chip.
+
+Anybody who has read my blog knows I have significant misgivings about Apple, their products, and [their business practices][drink-cider]. I am generally not a fan of working with Macs, but I must confess I was intrigued to see how this new chip would perform.
+
+For comparison, I recently bought a [Dell XPS 13][dell-xps-13] for my own personal use. Since both machines are similarly specced ultrabooks, I'm using it as my benchmark for these musings.
+
+## macOS still has a lot of issues
+
+My setup on this machine was pretty miserable. Having previously set Windows 10 up in a matter of a couple of minutes and gone straight from registering my biometrics to never being asked for a password again, I was expecting a similar level of polish from Apple.
+
+Things went wrong almost instantly.
+
+After logging in with my iCloud account and going through the usual "do you want to give us extra information?" questions, I hit a 20 minute pause as – for seemingly no reason – the computer could not establish a connection with iCloud any more.
+
+<Tweet id="1380153014347046914" />
+
+In the end I had to back out of that step and start again. Not a good start, Apple.
+
+As I mentioned in my previous musings on my Dell machine, Microsoft's Windows Hello is a brilliant hack that saves me a lot of time, so when Apple offered to let me use my fingerprint in place of a password I was eager to accept. I knew from my experiences with the iPhone that I would have to use my password on initial logins, but any time saving is good. So, with all this out of the way, I got logged in and set about installing my important apps, starting with my password manager (I had previously been reading my password from my phone, which I cannot recommend).
+
+When I opened up the macOS App Store, I noticed I was not logged in. But how could that be? I had logged in to iCloud as part of the setup process! Without logging in, I was not allowed to download anything, so I grumbled, put in my password again, and logged in. After doing this, I could download apps. Great.
+
+Except, wait, no. I could install apps I had _previously owned_, but trying to install a new application (such as my work's password manager) prompted for a password.
+
+![Image of a man blinking in disbelief](https://rootkey.fra1.cdn.digitaloceanspaces.com/images/post_images/blink.webp)
+
+But, _what_? I have now had to authenticate _three times_ in the last 10 minutes! This is absurd! Anyhow, after entering my password one last time, the system prompted me to use my fingerprint and I have not had to deal with this again.
+
+That was poor, Apple.
+
+Besides this, Apple's multi-tasking remains abysmal. Even with the best efforts of apps such as Magnet, macOS simply was not designed to allow for effective multi-tasking. The system is slow to switch between desktops (a process you _cannot_ speed up), window snapping is laughable, and the keyboard shortcuts remain significantly more confusing and awkward than their Windows/Linux/BSD equivalents.
+
+## Enough bitching, what's bitchin'?
+
+Okay, so this machine has a lot of really cool things going for it, mostly related to that chip.
+
+The MacBook is incredibly snappy. Apart from the delays that Apple has artificially placed in the system because ~aesthetics~, I have had absolutely no stuttering even as I hammer the poor thing with non-optimized apps and electron. This is a huge step up from the last MacBook I used and I have to say I'm very impressed. I'm currently writing this in VS Code which is noticeably quicker on my Mac than on my PC.
+
+It's also cool. My PC will heat up pretty sharpish as I'm using more and more (and I've also come across an issue where shutting the lid will put it into a death spiral of overheating for… some reason), but the MacBook has no such issues. I've been using the thing all day and it is still cool to the touch.
+
+And I do mean _all day_. I started working on this thing 13 hours ago and I'm just now starting to dip below 20% battery. That's crazy. My Dell will get a solid 5 hours of heavy use out of it but no more. This bad boy gives no shits about a whole day of work. It's the first machine I've used that hasn't felt like I'm being bullshitted when battery stats are quoted.
+
+### Shout out to a feature I used to hate
+
+When the MacBook Pro first sported a touch bar, I scoffed, I'll admit. I was dismayed at the removal of the fn keys and thought that a touch bar was a terrible replacement. I'm happy to say those fears have been rendered unfounded. The touch bar feels like a natural extension of everything you do on the machine, and several apps have some very clever contextual uses for it. In particular, I like that typing a command into the terminal will pop up with the option to bring up its man page. That's a really nice little thing that makes working with the computer just that much nicer. I think you could still have physical function keys _and_ the touch bar, but I'm not going to lose any sleep over it.
+
+## Overall
+
+This is a very impressive machine, and I can see exactly why it's topped so many for best laptop. I'm afraid macOS is far from ready to be my daily driver, but if this is a sign of things to come for ARM, I'm hyped. With the recent announcement that [ARM will be a tier 1 target for FreeBSD][freebsd-list], plus the work that I've been seeing in the Windows and Linux world to get better ARM support, the future has never been brighter for RISC. The M1 Mac line proves that there is very much a premium experience to be had with ARM processors.
+
+I can't wait.
+
+{/*Article links*/}
+
+[drink-cider]: ./2018/apple-drink-the-cider
+[dell-xps-13]: ../2021/dell-xps-13-thoughts
+
+{/*External links*/}
+
+[freebsd-list]: https://lists.freebsd.org/pipermail/freebsd-arm/2021-April/023602.html
