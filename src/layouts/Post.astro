@@ -9,7 +9,7 @@ const { content } = Astro.props;
   <main>
     <article>
       <h1 class="font-bold">{content.title}</h1>
-      <p class="pt-0 mb-5">{simpleDate(content.date)}</p>
+      <p class="pt-0 mb-5">{simpleDate(content.pubDate)}</p>
       <slot />
     </article>
   </main>

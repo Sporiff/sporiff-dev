@@ -1,9 +1,9 @@
 ---
 layout: ../../../layouts/Post.astro
 title: Deploying Sophos in a production environment
-date: 2018-05-08T00:00:00+01:00
+pubDate: 2018-05-08T00:00:00+01:00
 tags: sophos, av, sysadmin, tech, antivirus, sccm, azure, intune
-summary: AntiVirus is a necessary evil. Deploying it is an unnecessary headache.
+description: AntiVirus is a necessary evil. Deploying it is an unnecessary headache.
 ---
 
 AntiVirus is a necessary evil. With the world more connected than ever before, every device needs protection and tools to allow administrators oversight. Currently, the AV I work with is Sophos' cloud-based solution for Windows, Mac, and Linux. When I was working on the frontline, I quickly became aware that Sophos did not deploy during imaging as it had initially done, nor could it easily be pushed out via SCCM. We spent a long time going around to each freshly imaged machine and loading Sophos on, rebooting the machine, and logging tickets to have its policy applied. This did not sit right with me, so upon my move to the systems team I decided to have a crack at simplifying the process.

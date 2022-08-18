@@ -1,12 +1,12 @@
 ---
 export interface Props {
 	title: string;
-	summary: string;
+	description: string;
 	href: string;
 	image?: string;
 }
 
-const { href, title, summary, image } = Astro.props as Props;
+const { href, title, description, image } = Astro.props as Props;
 ---
 
 <a href={href}>
@@ -33,7 +33,7 @@ const { href, title, summary, image } = Astro.props as Props;
 				{title}
 			</h2>
 			<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-				{summary}
+				{description}
 			</p>
 		</div>
 	</div>

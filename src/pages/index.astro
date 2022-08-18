@@ -1,8 +1,8 @@
 ---
 const allPosts = (await Astro.glob("./posts/**/*.mdx")).sort(
 	(a, b) =>
-		new Date(b.frontmatter.date).valueOf() -
-		new Date(a.frontmatter.date).valueOf()
+		new Date(b.frontmatter.pubDate).valueOf() -
+		new Date(a.frontmatter.pubDate).valueOf()
 );
 
 const featuredArticles = allPosts.slice(0, 4);
@@ -23,7 +23,7 @@ import Layout from "../layouts/Layout.astro";
 						<Card
 							href={String(option.url)}
 							image={option.frontmatter.image}
-							summary={option.frontmatter.summary}
+							description={option.frontmatter.description}
 							title={option.frontmatter.title}
 						/>
 					))
