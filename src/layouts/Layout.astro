@@ -3,9 +3,12 @@ export interface Props {
 	title: string;
 	pubDate: string;
 	author: string;
+	description: string;
+	image: string;
+	alt: string;
 }
 
-const { title, pubDate, author } = Astro.props as Props;
+const { title, pubDate, author, description, image, alt } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -27,6 +30,12 @@ const { title, pubDate, author } = Astro.props as Props;
 		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/manifest.json">
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@thatdapperbrit" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
+		<meta name="twitter:image:alt" content={alt} />
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">

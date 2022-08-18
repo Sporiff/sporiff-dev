@@ -5,7 +5,12 @@ import { simpleDate } from "../lib";
 const { content } = Astro.props;
 ---
 
-<Layout title={`${content.title}`} pubDate={`Published on ${simpleDate(content.pubDate)}`} author="Ciarán Ainsworth">
+<Layout 
+  title={`${content.title}`} 
+  pubDate={`Published on ${simpleDate(content.pubDate)}`} 
+  author="Ciarán Ainsworth"
+  image={`${content.image ? content.image : '/images/avatar.webp'}`}
+  alt={`${content.alt ? content.alt : 'A pixel art rendering of the author'}`}>
   <main>
     <article>
       <h1 class="font-bold">{content.title}</h1>

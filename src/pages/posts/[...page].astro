@@ -14,7 +14,13 @@ import { simpleDate } from "../../lib";
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title={`Posts: page ${page.currentPage}`} author="Ciarán Ainsworth" pubDate="">
+<Layout
+  title={`Posts: page ${page.currentPage}`}
+  author="Ciarán Ainsworth"
+  pubDate=""
+  image="/images/avatar.webp"
+  alt="A pixel art rendering of the author"
+>
   <main>
     <h1 class="text-4xl font-semibold mb-10 text-center">
       Posts: page {page.currentPage}
