@@ -10,6 +10,7 @@ const { content } = Astro.props;
   pubDate={`Published on ${simpleDate(content.pubDate)}`} 
   author="Ciarán Ainsworth"
   image={`${content.image ? content.image : '/images/avatar.webp'}`}
+  description={`${content.description}`}
   alt={`${content.alt ? content.alt : 'A pixel art rendering of the author'}`}>
   <main>
     <article>

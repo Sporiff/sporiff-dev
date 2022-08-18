@@ -4,7 +4,13 @@ import "../style/main.css";
 const { content } = Astro.props;
 ---
 
-<Layout title={`${content.title}`} author="Ciarán Ainsworth" pubDate="">
+<Layout 
+  title={`${content.title}`} 
+  author="Ciarán Ainsworth" 
+  pubDate=""
+  description="About me"
+  image="/images/avatar.webp"
+  alt="A pixel art rendering of the author">
   <main>
     <article>
       <h1 class="font-bold">{content.title}</h1>
