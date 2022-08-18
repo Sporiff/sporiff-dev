@@ -102,6 +102,10 @@ body {
    @apply my-6;
  }
 
+ article img {
+  @apply mx-auto;
+ }
+
  #pages h2 {
   @apply text-2xl;
   @apply font-semibold;
