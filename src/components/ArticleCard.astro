@@ -1,0 +1,43 @@
+---
+export interface Props {
+	title: string;
+	description: string;
+	href: string;
+	image?: string;
+}
+
+const placeholder = "https://via.placeholder.com/750x400.webp";
+const { href, title, description, image } = Astro.props as Props;
+---
+
+<a href={href}>
+	<div
+		class="relative max-w-lg mb-10 bg-neutral-100 dark:bg-neutral-700 rounded-lg border border-gray-200 shadow-md dark:border-gray-700 h-[450px]"
+	>
+		{
+			image ? (
+				<div
+					class="flex flex-col items-center h-1/2 bg-cover"
+					style={{ backgroundImage: `url(${image})` }}
+				/>
+			) : (
+				<div
+					class="flex flex-col items-center h-1/2 bg-cover"
+					style={{ backgroundImage: `url(${placeholder})` }}
+				/>
+			)
+		}
+		<div class="p-5 mt-5 h-1/2">
+			<h2
+				class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+			>
+				{title}
+			</h2>
+			<p
+				class="mb-3 font-normal no-underline"
+			>
+				{description}
+			</p>
+		</div>
+	</div>
+</a>
