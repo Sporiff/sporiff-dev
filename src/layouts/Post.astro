@@ -4,20 +4,19 @@ import { simpleDate } from "../lib";
 const { content } = Astro.props;
 ---
 
-<Layout 
-  title={`${content.title}`} 
-  pubDate={`${content.pubDate ? content.pubDate : ''}`}
+<Layout
+  title={`${content.title}`}
+  pubDate={`${content.pubDate ? content.pubDate : ""}`}
   author="Ciarán Ainsworth"
-  image={`${content.image ? content.image : '/images/avatar.webp'}`}
+  image={`${content.image ? content.image : "/images/avatar.webp"}`}
   description={`${content.description}`}
-  alt={`${content.alt ? content.alt : 'A pixel art rendering of the author'}`}>
-  <main>
-    <article class="prose dark:prose-invert lg:prose-xl prose-h1:text-center prose-a:text-blue-700 hover:prose-a:text-blue-900 visited:prose-a:text-purple-800 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500 dark:visited:prose-a:text-purple-500 prose-blockquote:border-blue-700 dark:prose-blockquote:border-blue-500 ml-auto mr-auto prose-img:mr-auto prose-img:ml-auto">
-      <h1>{content.title}</h1>
-      {content.pubDate &&
-        <date>{simpleDate(content.pubDate)}</date>
-      }
-      <slot />
-    </article>
-  </main>
+  alt={`${content.alt ? content.alt : "A pixel art rendering of the author"}`}
+>
+  <article
+    class="prose dark:prose-invert lg:prose-xl prose-h1:text-center prose-a:text-blue-700 hover:prose-a:text-blue-900 visited:prose-a:text-purple-800 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500 dark:visited:prose-a:text-purple-500 prose-blockquote:border-blue-700 dark:prose-blockquote:border-blue-500 ml-auto mr-auto prose-img:mr-auto prose-img:ml-auto"
+  >
+    <h1>{content.title}</h1>
+    {content.pubDate && <date>{simpleDate(content.pubDate)}</date>}
+    <slot />
+  </article>
 </Layout>
