@@ -1,17 +1,10 @@
 ---
-export interface Props {
-	title: string;
-	pubDate: string;
-	author: string;
-	description: string;
-	image: string;
-	alt: string;
-}
+import type { Base } from "./types";
 
 const { title, pubDate, author, description, image, alt } =
-	Astro.props as Props;
+	Astro.props as Base;
 import { SEO } from "astro-seo";
-import '../styles/base.css';
+import "@styles/base.css";
 ---
 
 <!DOCTYPE html>

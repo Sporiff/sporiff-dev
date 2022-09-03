@@ -10,9 +10,9 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props;
-import { simpleDate } from '../../lib';
-import Pagination from '@components/Pagination.astro';
-import Layout from '@layouts/Base.astro';
+import { simpleDate } from "@helpers/lib";
+import Pagination from "@components/Pagination.astro";
+import Layout from "@layouts/Base.astro";
 ---
 
 <Layout
@@ -41,29 +41,5 @@ import Layout from '@layouts/Base.astro';
       }
     </section>
     <Pagination page={page} />
-    <!--
-    <nav class="-mt-6 flex justify-between">
-      {
-        page.url.prev ? (
-          <a
-            class="font-medium text-blue-700 hover:text-blue-900 visited:text-purple-800 dark:text-blue-300 dark:hover:text-blue-500 dark:visited:text-purple-500"
-            href={page.url.prev}
-          >
-            Newer
-          </a>
-        ) : null
-      }
-      {
-        page.url.next ? (
-          <a
-            class="font-medium text-blue-700 hover:text-blue-900 visited:text-purple-800 dark:text-blue-300 dark:hover:text-blue-500 dark:visited:text-purple-500"
-            href={page.url.next}
-          >
-            Older
-          </a>
-        ) : null
-      }
-    </nav>
-  -->
   </section>
 </Layout>

@@ -20,7 +20,8 @@
       "@components/*": ["src/components/*"],
       "@styles/*": ["src/styles/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@posts/*": ["src/pages/posts/*"]
+      "@posts/*": ["src/pages/posts/*"],
+      "@helpers/*": ["src/helpers/*"]
     }
   }
 }

@@ -1,10 +1,6 @@
 ---
-export interface Props {
-	author: string;
-   link: string;
-}
-
-const { author, link } = Astro.props as Props;
+import type { Quote } from "./types";
+const { author, link } = Astro.props as Quote;
 ---
 
 <blockquote>

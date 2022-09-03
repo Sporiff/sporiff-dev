@@ -30,7 +30,7 @@ const tags = [
     <div class="container">
       <ul class="columns-2 md:columns-3">
         {
-          tags.map((tag) => (
+          tags.map((tag: string) => (
             <li class="list-item list-disc">
               <a
                 href={`/tags/${tag}`}

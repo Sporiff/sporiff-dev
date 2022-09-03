@@ -1,10 +1,7 @@
 ---
-export interface Props {
-   link: string;
-   type: string
-}
+import type { Video } from "./types";
 
-const { link, type } = Astro.props as Props;
+const { link, type } = Astro.props as Video;
 ---
 
 <video controls>

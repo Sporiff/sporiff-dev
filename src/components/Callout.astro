@@ -1,10 +1,8 @@
 ---
-export interface Props {
-   type: string;
-}
+import type { Callout } from "./types";
 
-import { capitalizeFirstLetter } from "../lib";
-const { type } = Astro.props as Props;
+import { capitalizeFirstLetter } from "@helpers/lib";
+const { type } = Astro.props as Callout;
 ---
 
 <aside
