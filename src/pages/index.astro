@@ -1,13 +1,13 @@
 ---
-const allPosts = (await Astro.glob("./posts/**/*.mdx")).sort(
+const allPosts = (await Astro.glob('./posts/**/*.mdx')).sort(
 	(a, b) =>
 		new Date(b.frontmatter.pubDate).valueOf() -
 		new Date(a.frontmatter.pubDate).valueOf()
 );
 
 const featuredArticles = allPosts.slice(0, 4);
-import ArticleCard from "../components/ArticleCard.astro";
-import Layout from "../layouts/Base.astro";
+import ArticleCard from '@components/ArticleCard.astro';
+import Layout from '@layouts/Base.astro';
 ---
 
 <Layout
