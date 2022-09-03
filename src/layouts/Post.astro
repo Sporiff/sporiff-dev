@@ -18,15 +18,21 @@ const { content } = Astro.props;
     <h1>{content.title}</h1>
     <aside class="text-center">
       {content.pubDate && <date>{simpleDate(content.pubDate)}</date>}
-      {
-        content.tags &&
-          content.tags.map((tag: string) => (
-            <a href={`/tags/${tag}`} class="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border">
-              #{tag}
-            </a>
-          ))
-      }
     </aside>
     <slot />
+    {
+      content.tags && (
+        <aside class="flex items-center not-prose">
+          {content.tags.map((tag: string) => (
+            <a
+              href={`/tags/${tag}`}
+              class="text-sm inline-flex m-1 px-3 py-1 rounded-full border shadow-md dark:shadow-gray-700 dark:border-gray-500 bg-blue-700 text-white font-bold"
+            >
+              #{tag}
+            </a>
+          ))}
+        </aside>
+      )
+    }
   </article>
 </Layout>
