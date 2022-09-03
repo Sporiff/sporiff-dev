@@ -10,8 +10,9 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props;
-import { simpleDate } from "../../lib";
-import Layout from "../../layouts/Base.astro";
+import { simpleDate } from '../../lib';
+import Pagination from '@components/Pagination.astro';
+import Layout from '@layouts/Base.astro';
 ---
 
 <Layout
@@ -22,7 +23,7 @@ import Layout from "../../layouts/Base.astro";
   image="/images/avatar.webp"
   alt="A pixel art rendering of the author"
 >
-  <main class="prose prose-a:no-underline dark:prose-invert lg:prose-xl prose-h1:text-center ml-auto mr-auto">
+  <section class="prose prose-a:no-underline dark:prose-invert lg:prose-xl prose-h1:text-center ml-auto mr-auto">
     <h1>
       Posts: page {page.currentPage}
     </h1>
@@ -39,6 +40,8 @@ import Layout from "../../layouts/Base.astro";
         ))
       }
     </section>
+    <Pagination page={page} />
+    <!--
     <nav class="-mt-6 flex justify-between">
       {
         page.url.prev ? (
@@ -61,5 +64,6 @@ import Layout from "../../layouts/Base.astro";
         ) : null
       }
     </nav>
-  </main>
+  -->
+  </section>
 </Layout>
