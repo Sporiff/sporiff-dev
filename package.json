@@ -17,7 +17,7 @@
     "astro": "^1.2.1",
     "astro-compress": "^1.0.8",
     "astro-seo": "^0.6.0",
-    "autoprefixer": "^10.4.9",
+    "autoprefixer": "^10.4.11",
     "netlify-cli": "^11.7.1",
     "postcss-import": "^15.0.0"
   },
