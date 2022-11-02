@@ -8,18 +8,18 @@
     "automerge": true,
     "automergeType": "pr",
     "platformAutomerge": true
- },
- "packageRules": [
+  },
+  "packageRules": [
     {
-       "matchUpdateTypes": [
-          "minor",
-          "patch",
-          "pin"
-       ],
-       "matchCurrentVersion": "!/^0/",
-       "automerge": true,
-       "automergeType": "pr",
-       "platformAutomerge": true
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin"
+      ],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
     }
- ]
+  ]
 }
