@@ -21,7 +21,7 @@
     "netlify-cli": "12.0.11"
   },
   "dependencies": {
-    "@astrojs/prism": "1.0.1",
+    "@astrojs/prism": "1.0.2",
     "@astrojs/rss": "1.0.3",
     "@types/node": "18.11.9",
     "astro-embed": "0.1.3",
