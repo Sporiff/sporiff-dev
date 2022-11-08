@@ -2,7 +2,7 @@
 import type { Callout } from "./types";
 
 import { capitalizeFirstLetter } from "@helpers/lib";
-const { type } = Astro.props as Callout;
+const { type, title } = Astro.props as Callout;
 ---
 
 <aside
@@ -67,7 +67,7 @@ const { type } = Astro.props as Callout;
             )
          }
       </span>
-      <h2 class="text-2xl text-white">{capitalizeFirstLetter(type)}</h2>
+      <h2 class="text-2xl text-white">{capitalizeFirstLetter(title ? title : type)}</h2>
    </div>
    <div class="p-2 mx-2">
       <slot />

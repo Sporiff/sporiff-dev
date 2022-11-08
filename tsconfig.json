@@ -21,7 +21,9 @@
       "@styles/*": ["src/styles/*"],
       "@layouts/*": ["src/layouts/*"],
       "@posts/*": ["src/pages/posts/*"],
-      "@helpers/*": ["src/helpers/*"]
+      "@helpers/*": ["src/helpers/*"],
+      "@data/*": ["src/data/*"],
+      "@icons/*": ["public/images/icons/*"]
     }
   }
 }

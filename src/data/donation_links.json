@@ -1,0 +1,101 @@
+[
+   {
+      "name": "Castopod",
+      "icon": "/images/icons/castopod.png",
+      "description": "Free and open source podcasting",
+      "links": [
+         {
+            "name": "Donate",
+            "url": "https://opencollective.com/castopod"
+         }
+      ]
+   },
+   {
+      "name": "Funkwhale",
+      "icon": "/images/icons/funkwhale.svg",
+      "description": "Federated music player and audio publishing platform",
+      "links": [
+         {
+            "name": "Donate",
+            "url": "https://opencollective.com/funkwhale"
+         }
+      ]
+   },
+   {
+      "name": "GoToSocial",
+      "icon": "/images/icons/gotosocial.png",
+      "description": "Social network server, written in Golang",
+      "links": [
+         {
+            "name": "Donate",
+            "url": "https://opencollective.com/gotosocial"
+         }
+      ]
+   },
+   {
+      "name": "Mastodon",
+      "icon": "/images/icons/mastodon.png",
+      "description": "Free, open-source decentralized social media platform.",
+      "links": [
+         {
+            "name": "Donate",
+            "url": "https://sponsor.joinmastodon.org/"
+         }
+      ]
+   },
+   {
+      "name": "Misskey",
+      "icon": "/images/icons/misskey.png",
+      "description": "An open source, decentralized social media platform",
+      "links": [
+         {
+            "name": "Donate",
+            "url": "https://www.patreon.com/syuilo"
+         }
+      ]
+   },
+   {
+      "name": "Owncast",
+      "icon": "/images/icons/owncast.png",
+      "description": "Open source live streaming and chat",
+      "links": [
+         {
+            "name": "Donate",
+            "url": "https://opencollective.com/owncast"
+         }
+      ]
+   },
+   {
+      "name": "Peertube",
+      "icon": "/images/icons/peertube.png",
+      "description": "Free software to take back control of your videos",
+      "links": [
+         {
+            "name": "Donate",
+            "url": "https://support.joinpeertube.org/"
+         }
+      ]
+   },
+   {
+      "name": "Pixelfed",
+      "icon": "/images/icons/pixelfed.svg",
+      "description": "A free and ethical photo sharing platform",
+      "links": [
+         {
+            "name": "Donate",
+            "url": "https://opencollective.com/pixelfed"
+         }
+      ]
+   },
+   {
+      "name": "WriteFreely",
+      "icon": "/images/icons/writefreely.png",
+      "description": "An open source platform for building a writing space on the web",
+      "links": [
+         {
+            "name": "Donate",
+            "url": "https://opencollective.com/writefreely"
+         }
+      ]
+   }
+]

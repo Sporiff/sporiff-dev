@@ -10,6 +10,7 @@ export interface Quote {
 
 export interface Callout {
    type: string;
+	title?: string;
 }
 
 export interface ArticleCard {
@@ -17,4 +18,22 @@ export interface ArticleCard {
 	description: string;
 	href: string;
 	image?: string;
+}
+
+// LinkList types
+
+interface Links {
+   name: string;
+   url: string;
+}
+
+interface File {
+   name: string;
+   icon?: string;
+   description?: string;
+   links: Array<Links>;
+}
+
+export interface LinkList {
+   list: Array<File>;
 }
