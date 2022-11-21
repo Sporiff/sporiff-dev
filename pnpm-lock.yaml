@@ -10,7 +10,7 @@ specifiers:
   '@types/node': 18.11.9
   astro: 1.6.10
   astro-compress: 1.1.7
-  astro-embed: 0.1.3
+  astro-embed: 0.2.0
   astro-seo: 0.6.0
   autoprefixer: 10.4.13
   netlify-cli: 12.2.4
@@ -22,7 +22,7 @@ dependencies:
   '@astrojs/prism': 1.0.2
   '@astrojs/rss': 1.0.3
   '@types/node': 18.11.9
-  astro-embed: 0.1.3_astro@1.6.10
+  astro-embed: 0.2.0_astro@1.6.10
   postcss: 8.4.19
   rollup: 3.3.0
   tailwindcss: 3.2.4_postcss@8.4.19
@@ -47,25 +47,30 @@ packages:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
 
-  /@astro-community/astro-embed-integration/0.1.2_astro@1.6.10:
-    resolution: {integrity: sha512-ONBDHkOUZ7ssQNzRc5XRZtBBJR0zC68Gm2FCm5w6fxxciDkRkU9Zn9BSssgaNrLPfsXycxFLtQZT3dX9ZPsAxw==}
+  /@astro-community/astro-embed-integration/0.2.0_astro@1.6.10:
+    resolution: {integrity: sha512-VIw3QWi67YrnLGJgyv/4/XspejKgcCOfbx69gOq6ZB/PFO22h02wiOiNeolq2bAg4vwPbjRWqvx+SPmi4XlV3g==}
     peerDependencies:
       astro: ^1.0.0-beta.10
     dependencies:
-      '@astro-community/astro-embed-twitter': 0.1.3_astro@1.6.10
+      '@astro-community/astro-embed-twitter': 0.2.0_astro@1.6.10
       '@astro-community/astro-embed-vimeo': 0.1.1_astro@1.6.10
       '@astro-community/astro-embed-youtube': 0.2.1_astro@1.6.10
       astro: 1.6.10_@types+node@18.11.9
       unist-util-select: 4.0.1
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
-  /@astro-community/astro-embed-twitter/0.1.3_astro@1.6.10:
-    resolution: {integrity: sha512-lcOBnzhczNrngkafzD+8BGKiK8oJvahg3/QUuWgueNwHRU8C+18brdxKc1i4ttZWgAt1A5u+jx21Tc4bquMUzg==}
+  /@astro-community/astro-embed-twitter/0.2.0_astro@1.6.10:
+    resolution: {integrity: sha512-HcgSPQWqYOaEfX4pme8Th9RIISDEutWEQvIAV6ZhFYzJ2YS5M2wEX1VaC4GOkJ7JO+pWYVf+mvJzqfQA6lPudA==}
     peerDependencies:
       astro: ^1.0.0-beta.10
     dependencies:
       '@astro-community/astro-embed-utils': 0.0.3
       astro: 1.6.10_@types+node@18.11.9
+      twitter-api-sdk: 1.2.1
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /@astro-community/astro-embed-utils/0.0.3:
@@ -1933,6 +1938,13 @@ packages:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
     dev: true
 
+  /abort-controller/3.0.0:
+    resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
+    engines: {node: '>=6.5'}
+    dependencies:
+      event-target-shim: 5.0.1
+    dev: false
+
   /accepts/1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
     engines: {node: '>= 0.6'}
@@ -2302,16 +2314,18 @@ packages:
       terser: 5.15.1
     dev: true
 
-  /astro-embed/0.1.3_astro@1.6.10:
-    resolution: {integrity: sha512-ztKlhFdUqlSlE5frybHLHQILsgBLnlcN2PejtkYEaIZHvysteiniT6Rg1o08z7+0FIt/KVE+8L/Y5g3ufFWdPg==}
+  /astro-embed/0.2.0_astro@1.6.10:
+    resolution: {integrity: sha512-aiMN/HMcSCp0jIDOXaZNsllihe7spgiOHX314VGfHmDPk/+FLlOsDzWZTMyIQRPjM6298qcpeQ06fRgqthCezQ==}
     peerDependencies:
       astro: ^1.0.0-beta.10
     dependencies:
-      '@astro-community/astro-embed-integration': 0.1.2_astro@1.6.10
-      '@astro-community/astro-embed-twitter': 0.1.3_astro@1.6.10
+      '@astro-community/astro-embed-integration': 0.2.0_astro@1.6.10
+      '@astro-community/astro-embed-twitter': 0.2.0_astro@1.6.10
       '@astro-community/astro-embed-vimeo': 0.1.1_astro@1.6.10
       '@astro-community/astro-embed-youtube': 0.2.1_astro@1.6.10
       astro: 1.6.10_@types+node@18.11.9
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /astro-seo/0.6.0:
@@ -4499,6 +4513,11 @@ packages:
     resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
     engines: {node: '>= 0.6'}
     dev: true
+
+  /event-target-shim/5.0.1:
+    resolution: {integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==}
+    engines: {node: '>=6'}
+    dev: false
 
   /eventemitter3/4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
@@ -7897,7 +7916,6 @@ packages:
         optional: true
     dependencies:
       whatwg-url: 5.0.0
-    dev: true
 
   /node-fetch/3.3.0:
     resolution: {integrity: sha512-BKwRP/O0UvoMKp7GNdwPlObhYGB5DQqwhEDQlNKuoqwVYSxkSZCSbHjnFFmUEtwSKRPU4kNK8PbDYYitwaE3QA==}
@@ -10382,7 +10400,6 @@ packages:
 
   /tr46/0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
-    dev: true
 
   /trim-lines/3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
@@ -10471,6 +10488,16 @@ packages:
     dependencies:
       safe-buffer: 5.2.1
     dev: true
+
+  /twitter-api-sdk/1.2.1:
+    resolution: {integrity: sha512-tNQ6DGYucFk94JlnUMsHCkHg5o1wnCdHh71Y2ukygNVssOdD1gNVjOpaojJrdwbEAhoZvcWdGHerCa55F8HKxQ==}
+    engines: {node: '>=14'}
+    dependencies:
+      abort-controller: 3.0.0
+      node-fetch: 2.6.7
+    transitivePeerDependencies:
+      - encoding
+    dev: false
 
   /type-check/0.3.2:
     resolution: {integrity: sha512-ZCmOJdvOWDBYJlzAoFkC+Q0+bUyEOS1ltgp1MGU03fqHG+dbi9tBFU2Rd9QKiDZFAYrhPh2JUf7rZRIuHRKtOg==}
@@ -10976,7 +11003,6 @@ packages:
 
   /webidl-conversions/3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
-    dev: true
 
   /well-known-symbols/2.0.0:
     resolution: {integrity: sha512-ZMjC3ho+KXo0BfJb7JgtQ5IBuvnShdlACNkKkdsqBmYw3bPAaJfPeYUo6tLUaT5tG/Gkh7xkpBhKRQ9e7pyg9Q==}
@@ -10988,7 +11014,6 @@ packages:
     dependencies:
       tr46: 0.0.3
       webidl-conversions: 3.0.1
-    dev: true
 
   /which-pm-runs/1.1.0:
     resolution: {integrity: sha512-n1brCuqClxfFfq/Rb0ICg9giSZqCS+pLtccdag6C2HyufBrh3fBOiy9nb6ggRMvWOVH5GrdJskj5iGTZNxd7SA==}
