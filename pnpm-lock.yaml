@@ -9,7 +9,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.8
   '@types/node': 18.11.10
   astro: 1.6.12
-  astro-compress: 1.1.13
+  astro-compress: 1.1.15
   astro-embed: 0.2.0
   astro-seo: 0.6.0
   autoprefixer: 10.4.13
@@ -33,7 +33,7 @@ devDependencies:
   '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
   astro: 1.6.12_@types+node@18.11.10
-  astro-compress: 1.1.13
+  astro-compress: 1.1.15
   astro-seo: 0.6.0
   autoprefixer: 10.4.13_postcss@8.4.19
   netlify-cli: 12.2.7_@types+node@18.11.10
@@ -1346,9 +1346,12 @@ packages:
       - supports-color
     dev: true
 
-  /@nikolarhristov/pipeline/0.0.8:
-    resolution: {integrity: sha512-+aGTAsMCExCEE17WpQTNJh3mkvlfyaTdHM6ugNQ1Pn6IBg/rQ6M/YtZp30644Kc6lD7BYAzvjq28T1hx6+rjPw==}
+  /@nikolarhristov/pipeline/0.0.10:
+    resolution: {integrity: sha512-8njHnJpRshYtu14QXGgbTKE7sY9HScwKwWuq0qx9g5VB3fUXWgluPFEAMovmS8ABvh8RjLTht1sxajswB8FUzg==}
     dependencies:
+      '@types/csso': 5.0.0
+      '@types/html-minifier-terser': 7.0.0
+      '@types/sharp': 0.31.0
       critters: 0.0.16
       csso: 5.0.5
       deepmerge-ts: 4.2.2
@@ -1696,6 +1699,16 @@ packages:
       '@types/responselike': 1.0.0
     dev: true
 
+  /@types/css-tree/2.0.0:
+    resolution: {integrity: sha512-mY2sXRLBnUPMYw6mkOT+6dABeaNxAEKZz6scE9kQPNJx8fKe1fOsm8Honl7+xFYe6TKX8WNk2+7oMp2vBArJ9Q==}
+    dev: true
+
+  /@types/csso/5.0.0:
+    resolution: {integrity: sha512-EMrCTGpXRUsbFfZBzn2jcW6Sqg8kxWXkJcpvAGYSEzFqAJ2THDJSwiMeS2fPUw+0p6RQNT/n8F/skEc9hUBc0g==}
+    dependencies:
+      '@types/css-tree': 2.0.0
+    dev: true
+
   /@types/debug/4.1.7:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
@@ -1748,6 +1761,10 @@ packages:
 
   /@types/html-escaper/3.0.0:
     resolution: {integrity: sha512-OcJcvP3Yk8mjYwf/IdXZtTE1tb/u0WF0qa29ER07ZHCYUBZXSN29Z1mBS+/96+kNMGTFUAbSz9X+pHmHpZrTCw==}
+
+  /@types/html-minifier-terser/7.0.0:
+    resolution: {integrity: sha512-hw3bhStrg5e3FQT8qZKCJTrzt/UbEaunU1xRWJ+aNOTmeBMvE3S4Ml2HiiNnZgL8izu0LFVkHUoPFXL1s5QNpQ==}
+    dev: true
 
   /@types/http-cache-semantics/4.0.1:
     resolution: {integrity: sha512-SZs7ekbP8CN0txVG2xVRH6EgKmEm31BOxA07vkFaETzZz1xh+cbt8BcI0slpymvwhx5dlFnQG2rTlPVQn+iRPQ==}
@@ -1854,6 +1871,12 @@ packages:
 
   /@types/semver/7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
+    dev: true
+
+  /@types/sharp/0.31.0:
+    resolution: {integrity: sha512-nwivOU101fYInCwdDcH/0/Ru6yIRXOpORx25ynEOc6/IakuCmjOAGpaO5VfUl4QkDtUC6hj+Z2eCQvgXOioknw==}
+    dependencies:
+      '@types/node': 18.11.10
     dev: true
 
   /@types/unist/2.0.6:
@@ -2350,10 +2373,10 @@ packages:
     hasBin: true
     dev: true
 
-  /astro-compress/1.1.13:
-    resolution: {integrity: sha512-nh6TwQeZHYrbtgNynJYQYO6FlkQZ9+dHp8+B4U2YaJ+zQJvHnhPSv1w33e5EkDz4mkOJ7XOzxBnN18tNOFEosg==}
+  /astro-compress/1.1.15:
+    resolution: {integrity: sha512-DOjll0tJ4ZaV/m3HtVMlpYbbSiQDmjdTOX7uTjSG+i0g0UHZdQ2Z2aDfDKLYpze+Eax9Y7KF5c839ysArZ4cMA==}
     dependencies:
-      '@nikolarhristov/pipeline': 0.0.8
+      '@nikolarhristov/pipeline': 0.0.10
     dev: true
 
   /astro-embed/0.2.0_astro@1.6.12:
