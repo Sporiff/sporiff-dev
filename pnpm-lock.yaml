@@ -13,7 +13,7 @@ specifiers:
   astro-embed: 0.2.0
   astro-seo: 0.6.0
   autoprefixer: 10.4.13
-  netlify-cli: 12.2.9
+  netlify-cli: 12.2.10
   postcss: 8.4.20
   rollup: 3.7.3
   tailwindcss: 3.2.4
@@ -36,7 +36,7 @@ devDependencies:
   astro-compress: 1.1.19
   astro-seo: 0.6.0
   autoprefixer: 10.4.13_postcss@8.4.20
-  netlify-cli: 12.2.9_@types+node@18.11.13
+  netlify-cli: 12.2.10_@types+node@18.11.13
 
 packages:
 
@@ -7653,8 +7653,8 @@ packages:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
 
-  /netlify-cli/12.2.9_@types+node@18.11.13:
-    resolution: {integrity: sha512-Y9WjkLql2gTdNHK2Bo7omqI1Er5inxTYFIi0+1vSvWzypmH/PjsNGXpYu2L0AfYoSbVNUFtIjjo7r7mnB6qFvA==}
+  /netlify-cli/12.2.10_@types+node@18.11.13:
+    resolution: {integrity: sha512-0TUZr3LlI8VknRP43kxSsh/VygxcV3RyNiT5Yy31dBYULKY1n7xhGjrCf8tucdF3pjzblMEk0svpaeoFzIBFCA==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
     requiresBuild: true
@@ -7884,14 +7884,14 @@ packages:
     resolution: {integrity: sha512-8Q1hXew6ETzqKRAs3jjLioSxNfT1cx74ooiF8RlAONwVMcfq+UdzLC2eB5qcPldUxaE5w3ytLkrmV1TGddhZTA==}
     engines: {node: '>=6.0'}
     dependencies:
-      '@babel/parser': 7.16.8
+      '@babel/parser': 7.20.5
     dev: true
 
   /node-source-walk/5.0.0:
     resolution: {integrity: sha512-58APXoMXpmmU+oVBJFajhTCoD8d/OGtngnVAWzIo2A8yn0IXwBzvIVIsTzoie/SrA37u+1hnpNz2HMWx/VIqlw==}
     engines: {node: '>=12'}
     dependencies:
-      '@babel/parser': 7.16.8
+      '@babel/parser': 7.20.5
     dev: true
 
   /node-stream-zip/1.15.0:
