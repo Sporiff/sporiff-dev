@@ -23,7 +23,7 @@
   "dependencies": {
     "@astrojs/prism": "1.0.2",
     "@astrojs/rss": "1.2.1",
-    "@types/node": "18.11.15",
+    "@types/node": "18.11.16",
     "astro-embed": "0.2.0",
     "postcss": "8.4.20",
     "rollup": "3.7.4",
