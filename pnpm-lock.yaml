@@ -8,7 +8,7 @@ specifiers:
   '@astrojs/tailwind': 2.1.3
   '@tailwindcss/typography': 0.5.8
   '@types/node': 18.11.18
-  astro: 1.8.0
+  astro: 1.9.0
   astro-compress: 1.1.24
   astro-embed: 0.2.0
   astro-seo: 0.6.1
@@ -22,7 +22,7 @@ dependencies:
   '@astrojs/prism': 1.0.2
   '@astrojs/rss': 2.0.0
   '@types/node': 18.11.18
-  astro-embed: 0.2.0_astro@1.8.0
+  astro-embed: 0.2.0_astro@1.9.0
   postcss: 8.4.20
   rollup: 3.9.1
   tailwindcss: 3.2.4_postcss@8.4.20
@@ -32,7 +32,7 @@ devDependencies:
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
-  astro: 1.8.0_@types+node@18.11.18
+  astro: 1.9.0_@types+node@18.11.18
   astro-compress: 1.1.24
   astro-seo: 0.6.1
   autoprefixer: 10.4.13_postcss@8.4.20
@@ -47,27 +47,27 @@ packages:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
 
-  /@astro-community/astro-embed-integration/0.2.0_astro@1.8.0:
+  /@astro-community/astro-embed-integration/0.2.0_astro@1.9.0:
     resolution: {integrity: sha512-VIw3QWi67YrnLGJgyv/4/XspejKgcCOfbx69gOq6ZB/PFO22h02wiOiNeolq2bAg4vwPbjRWqvx+SPmi4XlV3g==}
     peerDependencies:
       astro: ^1.0.0-beta.10
     dependencies:
-      '@astro-community/astro-embed-twitter': 0.2.1_astro@1.8.0
-      '@astro-community/astro-embed-vimeo': 0.1.1_astro@1.8.0
-      '@astro-community/astro-embed-youtube': 0.2.1_astro@1.8.0
-      astro: 1.8.0_@types+node@18.11.18
+      '@astro-community/astro-embed-twitter': 0.2.1_astro@1.9.0
+      '@astro-community/astro-embed-vimeo': 0.1.1_astro@1.9.0
+      '@astro-community/astro-embed-youtube': 0.2.1_astro@1.9.0
+      astro: 1.9.0_@types+node@18.11.18
       unist-util-select: 4.0.2
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@astro-community/astro-embed-twitter/0.2.1_astro@1.8.0:
+  /@astro-community/astro-embed-twitter/0.2.1_astro@1.9.0:
     resolution: {integrity: sha512-5zidOnTNeZ11gWK8eXlc/dakIzEXTmMyoYb435jtBV8Tlx4dL1ev/lm3eMnuPcSwau7rD5eYJmtZToCJ8D00HQ==}
     peerDependencies:
       astro: ^1.0.0-beta.10
     dependencies:
       '@astro-community/astro-embed-utils': 0.0.3
-      astro: 1.8.0_@types+node@18.11.18
+      astro: 1.9.0_@types+node@18.11.18
       twitter-api-sdk: 1.2.1
     transitivePeerDependencies:
       - encoding
@@ -77,21 +77,21 @@ packages:
     resolution: {integrity: sha512-hXwSMtSAL3V9fnFHps+/CoDIJst26U/qSdI7srIQ8GPmFqdbcqJd/qOqYzGezAR/qTM8gmTjDCGOuVI0Z+xT3Q==}
     dev: false
 
-  /@astro-community/astro-embed-vimeo/0.1.1_astro@1.8.0:
+  /@astro-community/astro-embed-vimeo/0.1.1_astro@1.9.0:
     resolution: {integrity: sha512-M7ALKJkH8NDJFY+onsKvlxq7Lpj6FQm90W/+0cGilrdWkKBAYPVLApnkAcUf2strg/4cQ2otZekXI6uvU4ruzg==}
     peerDependencies:
       astro: ^1.0.0-beta.10
     dependencies:
-      astro: 1.8.0_@types+node@18.11.18
+      astro: 1.9.0_@types+node@18.11.18
       lite-vimeo-embed: 0.1.0
     dev: false
 
-  /@astro-community/astro-embed-youtube/0.2.1_astro@1.8.0:
+  /@astro-community/astro-embed-youtube/0.2.1_astro@1.9.0:
     resolution: {integrity: sha512-yO2u9MCDQwxRYnZixYcRbBU/QrrBI+69GLDh9W+M/dsgmSZxtZY4kG00ewmC+Lr0JCLteaxz2iSY1U61+WNfEw==}
     peerDependencies:
       astro: ^1.0.0-beta.10
     dependencies:
-      astro: 1.8.0_@types+node@18.11.18
+      astro: 1.9.0_@types+node@18.11.18
       lite-youtube-embed: 0.2.0
     dev: false
 
@@ -2364,16 +2364,16 @@ packages:
       terser: 5.16.1
     dev: true
 
-  /astro-embed/0.2.0_astro@1.8.0:
+  /astro-embed/0.2.0_astro@1.9.0:
     resolution: {integrity: sha512-aiMN/HMcSCp0jIDOXaZNsllihe7spgiOHX314VGfHmDPk/+FLlOsDzWZTMyIQRPjM6298qcpeQ06fRgqthCezQ==}
     peerDependencies:
       astro: ^1.0.0-beta.10
     dependencies:
-      '@astro-community/astro-embed-integration': 0.2.0_astro@1.8.0
-      '@astro-community/astro-embed-twitter': 0.2.1_astro@1.8.0
-      '@astro-community/astro-embed-vimeo': 0.1.1_astro@1.8.0
-      '@astro-community/astro-embed-youtube': 0.2.1_astro@1.8.0
-      astro: 1.8.0_@types+node@18.11.18
+      '@astro-community/astro-embed-integration': 0.2.0_astro@1.9.0
+      '@astro-community/astro-embed-twitter': 0.2.1_astro@1.9.0
+      '@astro-community/astro-embed-vimeo': 0.1.1_astro@1.9.0
+      '@astro-community/astro-embed-youtube': 0.2.1_astro@1.9.0
+      astro: 1.9.0_@types+node@18.11.18
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -2382,8 +2382,8 @@ packages:
     resolution: {integrity: sha512-eszmxiycjfLcmoRyB8x5lCrWAwcSHs1i5riR1a5JbyJI8OQAl9tn1JvWFRuZvNH483CFdfNCczirnc805t/soA==}
     dev: true
 
-  /astro/1.8.0_@types+node@18.11.18:
-    resolution: {integrity: sha512-MZIJveOC1OCIA0w2XmxjDtKviAEuYdF142DVq0VApInE1lm+CvAoyMgJs0a1h4mydD2vgQZpTjPhYKJIdxDjOA==}
+  /astro/1.9.0_@types+node@18.11.18:
+    resolution: {integrity: sha512-wHHMOHgqBGV4L8ThjCeBuVHq0mGF1F515jRyp5ns0MzFcu2nFk1frlXBKZEfmMMM84cilq3HeimrRTLkIGxI8A==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -2416,7 +2416,7 @@ packages:
       estree-walker: 3.0.1
       execa: 6.1.0
       fast-glob: 3.2.12
-      github-slugger: 1.5.0
+      github-slugger: 2.0.0
       gray-matter: 4.0.3
       html-entities: 2.3.3
       html-escaper: 3.0.3
@@ -5089,6 +5089,9 @@ packages:
 
   /github-slugger/1.5.0:
     resolution: {integrity: sha512-wIh+gKBI9Nshz2o46B0B3f5k/W+WI9ZAv6y5Dn5WJ5SK1t0TnDimB4WE5rmTD05ZAIn8HALCZVmCsvj0w0v0lw==}
+
+  /github-slugger/2.0.0:
+    resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
 
   /glob-parent/3.1.0:
     resolution: {integrity: sha512-E8Ak/2+dZY6fnzlR7+ueWvhsH1SjHr4jjss4YS/h4py44jY9MhK/VFdaZJAWDz6BbL21KeteKxFSFpq8OS5gVA==}
@@ -7842,14 +7845,14 @@ packages:
     resolution: {integrity: sha512-8Q1hXew6ETzqKRAs3jjLioSxNfT1cx74ooiF8RlAONwVMcfq+UdzLC2eB5qcPldUxaE5w3ytLkrmV1TGddhZTA==}
     engines: {node: '>=6.0'}
     dependencies:
-      '@babel/parser': 7.16.8
+      '@babel/parser': 7.20.7
     dev: true
 
   /node-source-walk/5.0.0:
     resolution: {integrity: sha512-58APXoMXpmmU+oVBJFajhTCoD8d/OGtngnVAWzIo2A8yn0IXwBzvIVIsTzoie/SrA37u+1hnpNz2HMWx/VIqlw==}
     engines: {node: '>=12'}
     dependencies:
-      '@babel/parser': 7.16.8
+      '@babel/parser': 7.20.7
     dev: true
 
   /node-stream-zip/1.15.0:
