@@ -9,7 +9,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.8
   '@types/node': 18.11.18
   astro: 1.9.1
-  astro-compress: 1.1.24
+  astro-compress: 1.1.25
   astro-embed: 0.2.0
   astro-seo: 0.6.1
   autoprefixer: 10.4.13
@@ -33,7 +33,7 @@ devDependencies:
   '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
   astro: 1.9.1_@types+node@18.11.18
-  astro-compress: 1.1.24
+  astro-compress: 1.1.25
   astro-seo: 0.6.1
   autoprefixer: 10.4.13_postcss@8.4.21
   netlify-cli: 12.5.0_@types+node@18.11.18
@@ -1845,8 +1845,8 @@ packages:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
     dev: true
 
-  /@types/sharp/0.31.0:
-    resolution: {integrity: sha512-nwivOU101fYInCwdDcH/0/Ru6yIRXOpORx25ynEOc6/IakuCmjOAGpaO5VfUl4QkDtUC6hj+Z2eCQvgXOioknw==}
+  /@types/sharp/0.31.1:
+    resolution: {integrity: sha512-5nWwamN9ZFHXaYEincMSuza8nNfOof8nmO+mcI+Agx1uMUk4/pQnNIcix+9rLPXzKrm1pS34+6WRDbDV0Jn7ag==}
     dependencies:
       '@types/node': 18.11.18
     dev: true
@@ -2350,16 +2350,16 @@ packages:
     hasBin: true
     dev: true
 
-  /astro-compress/1.1.24:
-    resolution: {integrity: sha512-S7yzhmYdHxMPn8N3E7XJFKhTuHFrwLovPyhMJAuReVmhISvR0cxubGxaYnSJZrE67vFePj5Y8Gkd82GJIjFS2A==}
+  /astro-compress/1.1.25:
+    resolution: {integrity: sha512-67AZL1cQ/GF0bEEOpzSRzJiHVHUExSy0mCt3kbh4maWP5ikdBmv4I4BlFhlBWOmS/POukSwtxHbkP2l9bALdbQ==}
     dependencies:
       '@types/csso': 5.0.0
       '@types/html-minifier-terser': 7.0.0
-      '@types/sharp': 0.31.0
+      '@types/sharp': 0.31.1
       csso: 5.0.5
       files-pipeline: 0.0.2
       html-minifier-terser: 7.1.0
-      sharp: 0.31.2
+      sharp: 0.31.3
       svgo: 3.0.2
       terser: 5.16.1
     dev: true
@@ -9489,8 +9489,8 @@ packages:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
     dev: true
 
-  /sharp/0.31.2:
-    resolution: {integrity: sha512-DUdNVEXgS5A97cTagSLIIp8dUZ/lZtk78iNVZgHdHbx1qnQR7JAHY0BnXnwwH39Iw+VKhO08CTYhIg0p98vQ5Q==}
+  /sharp/0.31.3:
+    resolution: {integrity: sha512-XcR4+FCLBFKw1bdB+GEhnUNXNXvnt0tDo4WsBsraKymuo/IAuPuCBVAL2wIkUw2r/dwFW5Q5+g66Kwl2dgDFVg==}
     engines: {node: '>=14.15.0'}
     requiresBuild: true
     dependencies:
