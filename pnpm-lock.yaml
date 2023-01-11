@@ -13,7 +13,7 @@ specifiers:
   astro-embed: 0.2.0
   astro-seo: 0.6.1
   autoprefixer: 10.4.13
-  netlify-cli: 12.7.0
+  netlify-cli: 12.7.2
   postcss: 8.4.21
   rollup: 3.9.1
   tailwindcss: 3.2.4
@@ -36,7 +36,7 @@ devDependencies:
   astro-compress: 1.1.25
   astro-seo: 0.6.1
   autoprefixer: 10.4.13_postcss@8.4.21
-  netlify-cli: 12.7.0_@types+node@18.11.18
+  netlify-cli: 12.7.2_@types+node@18.11.18
 
 packages:
 
@@ -884,8 +884,8 @@ packages:
       uuid: 9.0.0
     dev: true
 
-  /@netlify/edge-bundler/8.1.0:
-    resolution: {integrity: sha512-KfBfFq3fVYWlv2Q9lmaOwdm05fBGF1bE7aon7K5pcRRT+Baql59q8ZDiP/Ez3j5zq02LGoSh2ea/xwV6r9mHSw==}
+  /@netlify/edge-bundler/8.1.2:
+    resolution: {integrity: sha512-ODaWypy/vIEm8bDAUIT9P4x4EeK6M+P0/M+D4aHuxenrCBk1v37fIiz251jVnte8z2Obqrb+PG4et98oX+gOPw==}
     engines: {node: ^14.16.0 || >=16.0.0}
     dependencies:
       '@import-maps/resolve': 1.0.1
@@ -7741,8 +7741,8 @@ packages:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
 
-  /netlify-cli/12.7.0_@types+node@18.11.18:
-    resolution: {integrity: sha512-QL41g9ASCOBrEKxb/hiV3fwtxTkyOtp+7KXuomCOwkrQzqwMoQn/7k5Z8JbqyQ1yKEzCcO8vlO2Hf/jhgkjUSA==}
+  /netlify-cli/12.7.2_@types+node@18.11.18:
+    resolution: {integrity: sha512-6quAaycsIYKVA68upfUoSK1pkRUguR2oAED2vsZhXWNH1j3+O+1v6yYBgyCGewTPf/Z1ANlDh7c6pupW8/75iw==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
     requiresBuild: true
@@ -7750,7 +7750,7 @@ packages:
       '@fastify/static': 6.6.0
       '@netlify/build': 29.4.0_@types+node@18.11.18
       '@netlify/config': 20.3.0
-      '@netlify/edge-bundler': 8.1.0
+      '@netlify/edge-bundler': 8.1.2
       '@netlify/framework-info': 9.5.3
       '@netlify/local-functions-proxy': 1.1.1
       '@netlify/zip-it-and-ship-it': 8.2.0
