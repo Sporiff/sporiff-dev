@@ -6,7 +6,7 @@ specifiers:
   '@astrojs/rss': 2.0.0
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 2.1.3
-  '@tailwindcss/typography': 0.5.8
+  '@tailwindcss/typography': 0.5.9
   '@types/node': 18.11.18
   astro: 1.9.2
   astro-compress: 1.1.25
@@ -31,7 +31,7 @@ devDependencies:
   '@astrojs/mdx': 0.14.0_rollup@3.10.0
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.4
-  '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
+  '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
   astro: 1.9.2_@types+node@18.11.18
   astro-compress: 1.1.25
   astro-seo: 0.6.1
@@ -1661,8 +1661,8 @@ packages:
       defer-to-connect: 2.0.1
     dev: true
 
-  /@tailwindcss/typography/0.5.8_tailwindcss@3.2.4:
-    resolution: {integrity: sha512-xGQEp8KXN8Sd8m6R4xYmwxghmswrd0cPnNI2Lc6fmrC3OojysTBJJGSIVwPV56q4t6THFUK3HJ0EaWwpglSxWw==}
+  /@tailwindcss/typography/0.5.9_tailwindcss@3.2.4:
+    resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
