@@ -13,7 +13,7 @@ specifiers:
   astro-embed: 0.2.0
   astro-seo: 0.7.0
   autoprefixer: 10.4.13
-  netlify-cli: 12.8.0
+  netlify-cli: 12.9.0
   postcss: 8.4.21
   rollup: 3.10.0
   tailwindcss: 3.2.4
@@ -36,7 +36,7 @@ devDependencies:
   astro-compress: 1.1.27
   astro-seo: 0.7.0
   autoprefixer: 10.4.13_postcss@8.4.21
-  netlify-cli: 12.8.0_@types+node@18.11.18
+  netlify-cli: 12.9.0_@types+node@18.11.18
 
 packages:
 
@@ -7770,8 +7770,8 @@ packages:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
 
-  /netlify-cli/12.8.0_@types+node@18.11.18:
-    resolution: {integrity: sha512-SfcLc8EGSBOmX4RUCC75GqwAc8q5W2Ti3wOoZc0j9Xcz+QUG9xRq8LRL8MzChW1jsd/ONTBaL3Q53IIwa/nRTg==}
+  /netlify-cli/12.9.0_@types+node@18.11.18:
+    resolution: {integrity: sha512-WPIhQ4vyyfR72k939gssO/RsjJPvipnkTiiF+RRY+XQxu0yqhQc2aDu53uMKBsJD0oGpKOQrKCLbN1RJzJSQhg==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
     requiresBuild: true
@@ -7848,7 +7848,7 @@ packages:
       netlify-headers-parser: 7.1.1
       netlify-onegraph-internal: 0.10.1
       netlify-redirect-parser: 14.1.1
-      netlify-redirector: 0.3.1
+      netlify-redirector: 0.4.0
       node-fetch: 2.6.8
       node-version-alias: 1.0.1
       ora: 5.4.1
@@ -7925,8 +7925,8 @@ packages:
       toml: 3.0.0
     dev: true
 
-  /netlify-redirector/0.3.1:
-    resolution: {integrity: sha512-+8x07Ukx8vgKkGqTDq1GrkuCRR0DqheZ9fF5PXk6VbIChp9Qi8+psmwBV3hjocoyUvUGH7CIHLUk05aVwLN3wA==}
+  /netlify-redirector/0.4.0:
+    resolution: {integrity: sha512-ssD+V9o2DD9VnilOYC+34i07IrlY8XDsh5mN+qLYA4MxCpdALKXFICcz1KzsHZabuIS5XsF1VP/HzDyx5ubJ2g==}
     dev: true
 
   /netlify/13.1.1:
