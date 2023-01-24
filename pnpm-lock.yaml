@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/mdx': 0.14.0
+  '@astrojs/mdx': 0.15.0
   '@astrojs/prism': 1.0.2
   '@astrojs/rss': 2.1.0
   '@astrojs/sitemap': 1.0.0
@@ -28,7 +28,7 @@ dependencies:
   tailwindcss: 3.2.4_postcss@8.4.21
 
 devDependencies:
-  '@astrojs/mdx': 0.14.0_rollup@3.10.1
+  '@astrojs/mdx': 0.15.0_astro@1.9.2+rollup@3.10.1
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
@@ -145,12 +145,35 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/mdx/0.14.0_rollup@3.10.1:
-    resolution: {integrity: sha512-lmNh/7CeQmdZ0OCbnDnoDxQTKWleFdlT5YkjsutGIOhabY0xgCcWwb1Rbs/9m4vvTdCkp9zsZdRzUKEPFPbcsA==}
-    engines: {node: ^14.18.0 || >=16.12.0}
+  /@astrojs/markdown-remark/2.0.0_astro@1.9.2:
+    resolution: {integrity: sha512-PqDxi3L2jsxLWjsWRyn+BkaDtHKq2+ECI7PlW9NsEwu2jKKgl7sXj57s/Wjhyctr4efFdzewFArVFm1Gnb3rtw==}
+    peerDependencies:
+      astro: ^2.0.0
     dependencies:
-      '@astrojs/markdown-remark': 1.2.0
-      '@astrojs/prism': 1.0.2
+      '@astrojs/prism': 2.0.0
+      astro: 1.9.2_@types+node@18.11.18
+      github-slugger: 1.5.0
+      import-meta-resolve: 2.2.1
+      rehype-raw: 6.1.1
+      rehype-stringify: 9.0.3
+      remark-gfm: 3.0.1
+      remark-parse: 10.0.1
+      remark-rehype: 10.1.0
+      remark-smartypants: 2.0.0
+      shiki: 0.11.1
+      unified: 10.1.2
+      unist-util-visit: 4.1.1
+      vfile: 5.3.6
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@astrojs/mdx/0.15.0_astro@1.9.2+rollup@3.10.1:
+    resolution: {integrity: sha512-KABnoWZJdtmzlbTbCJKLHRfX6fM9PS+BjSUSq/OHlkkejPUlmrZvGbDdN0Yfw1/gY/KDP48L7BLy/9VAk5Y/Wg==}
+    engines: {node: '>=16.12.0'}
+    dependencies:
+      '@astrojs/markdown-remark': 2.0.0_astro@1.9.2
+      '@astrojs/prism': 2.0.0
       '@mdx-js/mdx': 2.2.1
       '@mdx-js/rollup': 2.2.1_rollup@3.10.1
       acorn: 8.8.1
@@ -167,6 +190,7 @@ packages:
       unist-util-visit: 4.1.1
       vfile: 5.3.6
     transitivePeerDependencies:
+      - astro
       - rollup
       - supports-color
     dev: true
@@ -189,6 +213,13 @@ packages:
     engines: {node: ^14.18.0 || >=16.12.0}
     dependencies:
       prismjs: 1.29.0
+
+  /@astrojs/prism/2.0.0:
+    resolution: {integrity: sha512-YgeoeEPqsxaEpg0rwe/bUq3653LqSQnMjrLlpYwrbQQMQQqz6Y5yXN+RX3SfLJ6ppNb4+Fu2+Z49EXjk48Ihjw==}
+    engines: {node: '>=16.12.0'}
+    dependencies:
+      prismjs: 1.29.0
+    dev: true
 
   /@astrojs/rss/2.1.0:
     resolution: {integrity: sha512-PrqtIDDAyu4MyIvhBZEQhftui5fqyO9JPvOe4QnVDhErMIYWXd0pVPpqdnE0SKZ5xykMkphYPAQdWDr7VeCzBg==}
