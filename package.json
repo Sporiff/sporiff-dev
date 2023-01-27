@@ -17,7 +17,7 @@
     "astro": "2.0.2",
     "astro-compress": "1.1.28",
     "astro-seo": "0.7.0",
-    "netlify-cli": "12.9.2"
+    "netlify-cli": "12.10.0"
   },
   "dependencies": {
     "@astrojs/prism": "2.0.0",
