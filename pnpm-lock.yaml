@@ -4,7 +4,7 @@ specifiers:
   '@astrojs/mdx': 0.15.1
   '@astrojs/prism': 2.0.0
   '@astrojs/rss': 2.1.0
-  '@astrojs/sitemap': 1.0.0
+  '@astrojs/sitemap': 1.0.1
   '@astrojs/tailwind': 3.0.0
   '@tailwindcss/typography': 0.5.9
   '@types/node': 18.11.18
@@ -26,7 +26,7 @@ dependencies:
 
 devDependencies:
   '@astrojs/mdx': 0.15.1_astro@2.0.2+rollup@3.12.0
-  '@astrojs/sitemap': 1.0.0
+  '@astrojs/sitemap': 1.0.1
   '@astrojs/tailwind': 3.0.0_uhsc6pehih5huiqhsy5i7sy5um
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
   astro: 2.0.2_@types+node@18.11.18
@@ -176,8 +176,8 @@ packages:
       kleur: 4.1.5
     dev: false
 
-  /@astrojs/sitemap/1.0.0:
-    resolution: {integrity: sha512-42GxuF5FP7RaKXZrwGLBLOX3hPv+Wl7ExJC43O0J5e34ojJkLeKf7QfwN1UwrJlqH0Ywi0Fm4/xGe482G09+wg==}
+  /@astrojs/sitemap/1.0.1:
+    resolution: {integrity: sha512-qexepZPH6/dLToI/njxr2FjvyxJU0HBAnQRNzEggF0ok811oSNC6su1DkyW2VKp0TNPbWoujuSbcb1yFOjnAqA==}
     dependencies:
       sitemap: 7.1.1
       zod: 3.20.2
