@@ -9,7 +9,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.9
   '@types/node': 18.13.0
   astro: 2.0.8
-  astro-compress: 1.1.29
+  astro-compress: 1.1.30
   astro-embed: 0.2.1
   astro-seo: 0.7.0
   netlify-cli: 12.10.0
@@ -30,7 +30,7 @@ devDependencies:
   '@astrojs/tailwind': 3.0.1_nzhaul33q55wvpvnukdgx72gje
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
   astro: 2.0.8_@types+node@18.13.0
-  astro-compress: 1.1.29
+  astro-compress: 1.1.30
   astro-seo: 0.7.0
   netlify-cli: 12.10.0_@types+node@18.13.0
 
@@ -2538,8 +2538,8 @@ packages:
     hasBin: true
     dev: true
 
-  /astro-compress/1.1.29:
-    resolution: {integrity: sha512-iR6zLxsh37H4RshK63mcSERwGDk7oE43fCSezK3LDIf6Lgagkau0eOpBikpBO6HtcQi+mgGrfSfGaV5EJYQTNQ==}
+  /astro-compress/1.1.30:
+    resolution: {integrity: sha512-9iG/GJqZLCxSIAWNUIHSDgY4WmMda8ODMuOGV2qcgKFBJUSAs/YdQPlI8hJa8+DLmyIkA1cBbvUO49HysKLQiA==}
     dependencies:
       '@types/csso': 5.0.0
       '@types/html-minifier-terser': 7.0.0
@@ -2549,7 +2549,7 @@ packages:
       html-minifier-terser: 7.1.0
       sharp: 0.31.3
       svgo: 3.0.2
-      terser: 5.16.2
+      terser: 5.16.3
     dev: true
 
   /astro-embed/0.2.1_astro@2.0.8:
@@ -5645,7 +5645,7 @@ packages:
       entities: 4.4.0
       param-case: 3.0.4
       relateurl: 0.2.7
-      terser: 5.16.2
+      terser: 5.16.3
     dev: true
 
   /html-void-elements/2.0.1:
@@ -10216,8 +10216,8 @@ packages:
       supports-hyperlinks: 2.3.0
     dev: true
 
-  /terser/5.16.2:
-    resolution: {integrity: sha512-JKuM+KvvWVqT7muHVyrwv7FVRPnmHDwF6XwoIxdbF5Witi0vu99RYpxDexpJndXt3jbZZmmWr2/mQa6HvSNdSg==}
+  /terser/5.16.3:
+    resolution: {integrity: sha512-v8wWLaS/xt3nE9dgKEWhNUFP6q4kngO5B8eYFUuebsu7Dw/UNAnpUod6UHo04jSSkv8TzKHjZDSd7EXdDQAl8Q==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
