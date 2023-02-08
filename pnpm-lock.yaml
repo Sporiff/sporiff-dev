@@ -9,7 +9,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.9
   '@types/node': 18.13.0
   astro: 2.0.9
-  astro-compress: 1.1.30
+  astro-compress: 1.1.31
   astro-embed: 0.2.1
   astro-seo: 0.7.0
   netlify-cli: 12.10.0
@@ -30,7 +30,7 @@ devDependencies:
   '@astrojs/tailwind': 3.0.1_zvsgqaak3x3s7p672wt32turri
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
   astro: 2.0.9_@types+node@18.13.0
-  astro-compress: 1.1.30
+  astro-compress: 1.1.31
   astro-seo: 0.7.0
   netlify-cli: 12.10.0_@types+node@18.13.0
 
@@ -2538,8 +2538,8 @@ packages:
     hasBin: true
     dev: true
 
-  /astro-compress/1.1.30:
-    resolution: {integrity: sha512-9iG/GJqZLCxSIAWNUIHSDgY4WmMda8ODMuOGV2qcgKFBJUSAs/YdQPlI8hJa8+DLmyIkA1cBbvUO49HysKLQiA==}
+  /astro-compress/1.1.31:
+    resolution: {integrity: sha512-Kr87S0+N32S+56KPRZ9uMiYK1rhBv6YIkBIps2bC5nhj4f1ustUHYffxvG83AcRl4XtQrSlVg/Uz+jufabbBQg==}
     dependencies:
       '@types/csso': 5.0.0
       '@types/html-minifier-terser': 7.0.0
