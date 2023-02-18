@@ -12,7 +12,7 @@ specifiers:
   astro-compress: 1.1.33
   astro-embed: 0.2.1
   astro-seo: 0.7.0
-  netlify-cli: 12.12.1
+  netlify-cli: 12.13.1
   rollup: 3.15.0
   tailwindcss: 3.2.7
 
@@ -32,7 +32,7 @@ devDependencies:
   astro: 2.0.14_@types+node@18.14.0
   astro-compress: 1.1.33
   astro-seo: 0.7.0
-  netlify-cli: 12.12.1_@types+node@18.14.0
+  netlify-cli: 12.13.1_@types+node@18.14.0
 
 packages:
 
@@ -905,7 +905,7 @@ packages:
       '@netlify/git-utils': 5.1.0
       '@netlify/plugins-list': 6.65.0
       '@netlify/run-utils': 5.1.0
-      '@netlify/zip-it-and-ship-it': 8.6.0_supports-color@9.3.1
+      '@netlify/zip-it-and-ship-it': 8.7.0_supports-color@9.3.1
       '@sindresorhus/slugify': 2.2.0
       ansi-escapes: 5.0.0
       chalk: 5.2.0
@@ -1005,6 +1005,33 @@ packages:
 
   /@netlify/edge-bundler/8.6.0:
     resolution: {integrity: sha512-DZd4V+LTY7OxELE3yypohErctPCfSD+m1mDlPU+IBJ55O6l4DU+03L2PD/SXk7GMJMG59yp6W5wp7+GQ2I8avg==}
+    engines: {node: ^14.16.0 || >=16.0.0}
+    dependencies:
+      '@import-maps/resolve': 1.0.1
+      ajv: 8.12.0
+      ajv-errors: 3.0.0_ajv@8.12.0
+      better-ajv-errors: 1.2.0_ajv@8.12.0
+      common-path-prefix: 3.0.0
+      del: 7.0.0
+      env-paths: 3.0.0
+      execa: 6.1.0
+      find-up: 6.3.0
+      get-port: 6.1.2
+      glob-to-regexp: 0.4.1
+      jsonc-parser: 3.2.0
+      node-fetch: 3.3.0
+      node-stream-zip: 1.15.0
+      p-retry: 5.1.2
+      p-wait-for: 4.1.0
+      path-key: 4.0.0
+      regexp-tree: 0.1.24
+      semver: 7.3.8
+      tmp-promise: 3.0.3
+      uuid: 9.0.0
+    dev: true
+
+  /@netlify/edge-bundler/8.7.0:
+    resolution: {integrity: sha512-HWVI0ji8YWduX8pl9H2PkW/InvXwRqzVrVv6XnBj3FkqRQYTnroJQh6THP/LB2oJG942vklkF/1jEyiTU6LEeA==}
     engines: {node: ^14.16.0 || >=16.0.0}
     dependencies:
       '@import-maps/resolve': 1.0.1
@@ -1259,7 +1286,7 @@ packages:
     resolution: {integrity: sha512-YD7OcL2ao7lItW7gf0w52H+a9YjEgrCNBAx3buehimOwN45DDIChKRz/WZCP8fs09XjqNvxEv8bV9cM1Cq87TQ==}
     engines: {node: ^14.16.0 || >=16.0.0}
     dependencies:
-      '@netlify/zip-it-and-ship-it': 8.6.0_supports-color@9.3.1
+      '@netlify/zip-it-and-ship-it': 8.7.0_supports-color@9.3.1
       cpy: 8.1.2_supports-color@9.3.1
       path-exists: 5.0.0
     transitivePeerDependencies:
@@ -1419,8 +1446,8 @@ packages:
       execa: 6.1.0
     dev: true
 
-  /@netlify/zip-it-and-ship-it/8.6.0:
-    resolution: {integrity: sha512-k1bykwO5h9nerPjFwjPe3dvL8XplnySxjL4BfPTOLMpfWnWurdpiFTpSY3nICz5jBvBzTjnaTGVe4mZOBNMViA==}
+  /@netlify/zip-it-and-ship-it/8.7.0:
+    resolution: {integrity: sha512-YPcftbNoWohCp84mwngFUdJfDV2LguOgq9yZhs3fjVw8KJmngYH9V4xpedygbXRtlQuFjHjnnau+UwxQRYDCNg==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -1460,8 +1487,8 @@ packages:
       - supports-color
     dev: true
 
-  /@netlify/zip-it-and-ship-it/8.6.0_supports-color@9.3.1:
-    resolution: {integrity: sha512-k1bykwO5h9nerPjFwjPe3dvL8XplnySxjL4BfPTOLMpfWnWurdpiFTpSY3nICz5jBvBzTjnaTGVe4mZOBNMViA==}
+  /@netlify/zip-it-and-ship-it/8.7.0_supports-color@9.3.1:
+    resolution: {integrity: sha512-YPcftbNoWohCp84mwngFUdJfDV2LguOgq9yZhs3fjVw8KJmngYH9V4xpedygbXRtlQuFjHjnnau+UwxQRYDCNg==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -7519,8 +7546,8 @@ packages:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
 
-  /netlify-cli/12.12.1_@types+node@18.14.0:
-    resolution: {integrity: sha512-2lXdjEyhtPJqodRc/QAq8pLqWrxRRksM5TR4rPFESjZ2nqsBN7efkJtYVEOpanYk/xm6yohHDOPlG2s18PjtyQ==}
+  /netlify-cli/12.13.1_@types+node@18.14.0:
+    resolution: {integrity: sha512-xqjPqT4bDCdauJvf75kcS6Z/55rz/R91FpC7wKYSIIfWnvLVRY4uik2lw9aOORNruEfVPDs0TjB9sTI4dDRTFA==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
     requiresBuild: true
@@ -7528,10 +7555,10 @@ packages:
       '@fastify/static': 6.9.0
       '@netlify/build': 29.5.7_@types+node@18.14.0
       '@netlify/config': 20.3.3
-      '@netlify/edge-bundler': 8.6.0
+      '@netlify/edge-bundler': 8.7.0
       '@netlify/framework-info': 9.8.1
       '@netlify/local-functions-proxy': 1.1.1
-      '@netlify/zip-it-and-ship-it': 8.6.0
+      '@netlify/zip-it-and-ship-it': 8.7.0
       '@octokit/rest': 19.0.7
       ansi-escapes: 5.0.0
       ansi-styles: 5.2.0
