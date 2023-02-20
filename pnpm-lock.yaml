@@ -13,7 +13,7 @@ specifiers:
   astro-embed: 0.2.1
   astro-seo: 0.7.1
   netlify-cli: 12.13.1
-  rollup: 3.17.1
+  rollup: 3.17.2
   tailwindcss: 3.2.7
 
 dependencies:
@@ -21,11 +21,11 @@ dependencies:
   '@astrojs/rss': 2.1.1
   '@types/node': 18.14.0
   astro-embed: 0.2.1_astro@2.0.14
-  rollup: 3.17.1
+  rollup: 3.17.2
   tailwindcss: 3.2.7
 
 devDependencies:
-  '@astrojs/mdx': 0.17.0_astro@2.0.14+rollup@3.17.1
+  '@astrojs/mdx': 0.17.0_astro@2.0.14+rollup@3.17.2
   '@astrojs/sitemap': 1.0.1
   '@astrojs/tailwind': 3.0.1_hf2kjfio2dr6w52rh4mpociq2u
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
@@ -136,14 +136,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/mdx/0.17.0_astro@2.0.14+rollup@3.17.1:
+  /@astrojs/mdx/0.17.0_astro@2.0.14+rollup@3.17.2:
     resolution: {integrity: sha512-vy4m/mwzdfDK4jC9wraFLMVwx13eXBPC8r7nkO5s8YlcFX6IDcl2LKPurP3+/ibpTei9IPQLIZOufXRDO96SYg==}
     engines: {node: '>=16.12.0'}
     dependencies:
       '@astrojs/markdown-remark': 2.0.1_astro@2.0.14
       '@astrojs/prism': 2.0.0
       '@mdx-js/mdx': 2.3.0
-      '@mdx-js/rollup': 2.3.0_rollup@3.17.1
+      '@mdx-js/rollup': 2.3.0_rollup@3.17.2
       acorn: 8.8.2
       es-module-lexer: 0.10.5
       estree-util-visit: 1.2.1
@@ -866,14 +866,14 @@ packages:
       - supports-color
     dev: true
 
-  /@mdx-js/rollup/2.3.0_rollup@3.17.1:
+  /@mdx-js/rollup/2.3.0_rollup@3.17.2:
     resolution: {integrity: sha512-wLvRfJS/M4UmdqTd+WoaySEE7q4BIejYf1xAHXYvtT1du/1Tl/z2450Gg2+Hu7fh05KwRRiehiTP9Yc/Dtn0fA==}
     peerDependencies:
       rollup: '>=2'
     dependencies:
       '@mdx-js/mdx': 2.3.0
-      '@rollup/pluginutils': 5.0.2_rollup@3.17.1
-      rollup: 3.17.1
+      '@rollup/pluginutils': 5.0.2_rollup@3.17.2
+      rollup: 3.17.2
       source-map: 0.7.4
       vfile: 5.3.7
     transitivePeerDependencies:
@@ -1681,7 +1681,7 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@rollup/pluginutils/5.0.2_rollup@3.17.1:
+  /@rollup/pluginutils/5.0.2_rollup@3.17.2:
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -1693,7 +1693,7 @@ packages:
       '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
-      rollup: 3.17.1
+      rollup: 3.17.2
     dev: true
 
   /@samverschueren/stream-to-observable/0.3.1_rxjs@6.6.7:
@@ -9208,8 +9208,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup/3.17.1:
-    resolution: {integrity: sha512-8RnSms6rNqHmZK+wiqgnPCqen+rRnUHXkciGDirh7B00g1rX1vpKbPDhuxCvAG2bburoI+W4Q9/PlUB/zYkiYA==}
+  /rollup/3.17.2:
+    resolution: {integrity: sha512-qMNZdlQPCkWodrAZ3qnJtvCAl4vpQ8q77uEujVCCbC/6CLB7Lcmvjq7HyiOSnf4fxTT9XgsE36oLHJBH49xjqA==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -10646,7 +10646,7 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.17.1
+      rollup: 3.17.2
     optionalDependencies:
       fsevents: 2.3.2
 
