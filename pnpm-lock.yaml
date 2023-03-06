@@ -180,7 +180,7 @@ packages:
     resolution: {integrity: sha512-JnKZcbD0WdFxw2VAj3qXb0cYKuvk6nwBYPfUy+plSa9TC9hikQrDFpd7yapOPTRf3AdmUittzFckoTw/nUilCw==}
     dependencies:
       sitemap: 7.1.1
-      zod: 3.21.0
+      zod: 3.21.1
     dev: true
 
   /@astrojs/tailwind/3.0.1_o7rlocdsudmdrstqcqbafrcodq:
@@ -2605,7 +2605,7 @@ packages:
       vite: 4.1.4_@types+node@18.14.6
       vitefu: 0.2.4_vite@4.1.4
       yargs-parser: 21.1.1
-      zod: 3.21.0
+      zod: 3.21.1
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -10932,8 +10932,8 @@ packages:
       readable-stream: 3.6.1
     dev: true
 
-  /zod/3.21.0:
-    resolution: {integrity: sha512-UYdykTcVxB6lfdyLzAqLyyYAlOcpoluECvjsdoaqfQmz9p+3LRaIqYcNiL/J2kFYp66fBM8wwBvIGVEjq7KtZw==}
+  /zod/3.21.1:
+    resolution: {integrity: sha512-+dTu2m6gmCbO9Ahm4ZBDapx2O6ZY9QSPXst2WXjcznPMwf2YNpn3RevLx4KkZp1OPW/ouFcoBtBzFz/LeY69oA==}
 
   /zwitch/2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
