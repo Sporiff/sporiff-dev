@@ -12,7 +12,7 @@ specifiers:
   astro-compress: 1.1.35
   astro-embed: 0.2.1
   astro-seo: 0.7.1
-  netlify-cli: 13.1.1
+  netlify-cli: 13.1.2
   rollup: 3.19.1
   tailwindcss: 3.2.7
 
@@ -32,7 +32,7 @@ devDependencies:
   astro: 2.1.2_@types+node@18.15.0
   astro-compress: 1.1.35
   astro-seo: 0.7.1
-  netlify-cli: 13.1.1_@types+node@18.15.0
+  netlify-cli: 13.1.2_@types+node@18.15.0
 
 packages:
 
@@ -1008,6 +1008,34 @@ packages:
 
   /@netlify/edge-bundler/8.11.0:
     resolution: {integrity: sha512-Hex57i1Tyb7kDd1q2e6dvpzYonFQSRRCP/INFnrjaaRgjzdQzEA5Y6PQIuCwbN33kI3G8V1ZNnc1gpJPuPEO7w==}
+    engines: {node: ^14.16.0 || >=16.0.0}
+    dependencies:
+      '@import-maps/resolve': 1.0.1
+      ajv: 8.12.0
+      ajv-errors: 3.0.0_ajv@8.12.0
+      better-ajv-errors: 1.2.0_ajv@8.12.0
+      common-path-prefix: 3.0.0
+      del: 7.0.0
+      env-paths: 3.0.0
+      execa: 6.1.0
+      find-up: 6.3.0
+      get-port: 6.1.2
+      glob-to-regexp: 0.4.1
+      is-path-inside: 4.0.0
+      jsonc-parser: 3.2.0
+      node-fetch: 3.3.0
+      node-stream-zip: 1.15.0
+      p-retry: 5.1.2
+      p-wait-for: 4.1.0
+      path-key: 4.0.0
+      regexp-tree: 0.1.24
+      semver: 7.3.8
+      tmp-promise: 3.0.3
+      uuid: 9.0.0
+    dev: true
+
+  /@netlify/edge-bundler/8.11.1:
+    resolution: {integrity: sha512-pj3myy714qX0OuPwtRTfBgaQ2fZwj5qkpACyeXtrsVcaHRNnE0l7cymfZ0fS0a/xkINj9fcyTEtZBahDuuLT2g==}
     engines: {node: ^14.16.0 || >=16.0.0}
     dependencies:
       '@import-maps/resolve': 1.0.1
@@ -7491,8 +7519,8 @@ packages:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
 
-  /netlify-cli/13.1.1_@types+node@18.15.0:
-    resolution: {integrity: sha512-PRcZfH63PU223PAjP9CkCXUjC1dvshy6DRQnhNJC+541TQB/sdDQRUKBPx185aKbcdhjoMhPXAlZO/LceY0EnQ==}
+  /netlify-cli/13.1.2_@types+node@18.15.0:
+    resolution: {integrity: sha512-1kanhjOytN/z8WCF5VvleJ57RtawvRjXN38RN4UaV7aKkSFLO2+UpFGtGtVihbp7x4cACYAaH/RJvtsrzWAKaQ==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
     requiresBuild: true
@@ -7500,7 +7528,7 @@ packages:
       '@fastify/static': 6.9.0
       '@netlify/build': 29.6.6_@types+node@18.15.0
       '@netlify/config': 20.3.4
-      '@netlify/edge-bundler': 8.11.0
+      '@netlify/edge-bundler': 8.11.1
       '@netlify/framework-info': 9.8.5
       '@netlify/local-functions-proxy': 1.1.1
       '@netlify/zip-it-and-ship-it': 8.9.0
