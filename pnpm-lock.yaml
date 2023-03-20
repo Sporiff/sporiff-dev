@@ -7,7 +7,7 @@ specifiers:
   '@astrojs/sitemap': 1.2.1
   '@astrojs/tailwind': 3.1.1
   '@tailwindcss/typography': 0.5.9
-  '@types/node': 18.15.3
+  '@types/node': 18.15.5
   astro: 2.1.3
   astro-compress: 1.1.35
   astro-embed: 0.2.1
@@ -19,7 +19,7 @@ specifiers:
 dependencies:
   '@astrojs/prism': 2.1.1
   '@astrojs/rss': 2.3.0
-  '@types/node': 18.15.3
+  '@types/node': 18.15.5
   astro-embed: 0.2.1_astro@2.1.3
   rollup: 3.20.0
   tailwindcss: 3.2.7
@@ -29,10 +29,10 @@ devDependencies:
   '@astrojs/sitemap': 1.2.1
   '@astrojs/tailwind': 3.1.1_2l4ywwlgzw2satesmi43zum3jy
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
-  astro: 2.1.3_@types+node@18.15.3
+  astro: 2.1.3_@types+node@18.15.5
   astro-compress: 1.1.35
   astro-seo: 0.7.1
-  netlify-cli: 13.1.6_@types+node@18.15.3
+  netlify-cli: 13.1.6_@types+node@18.15.5
 
 packages:
 
@@ -51,7 +51,7 @@ packages:
       '@astro-community/astro-embed-twitter': 0.2.2_astro@2.1.3
       '@astro-community/astro-embed-vimeo': 0.1.2_astro@2.1.3
       '@astro-community/astro-embed-youtube': 0.2.2_astro@2.1.3
-      astro: 2.1.3_@types+node@18.15.3
+      astro: 2.1.3_@types+node@18.15.5
       unist-util-select: 4.0.3
     transitivePeerDependencies:
       - encoding
@@ -63,7 +63,7 @@ packages:
       astro: ^1.0.0 || ^2.0.0-beta
     dependencies:
       '@astro-community/astro-embed-utils': 0.0.3
-      astro: 2.1.3_@types+node@18.15.3
+      astro: 2.1.3_@types+node@18.15.5
       twitter-api-sdk: 1.2.1
     transitivePeerDependencies:
       - encoding
@@ -78,7 +78,7 @@ packages:
     peerDependencies:
       astro: ^1.0.0 || ^2.0.0-beta
     dependencies:
-      astro: 2.1.3_@types+node@18.15.3
+      astro: 2.1.3_@types+node@18.15.5
       lite-vimeo-embed: 0.1.0
     dev: false
 
@@ -87,7 +87,7 @@ packages:
     peerDependencies:
       astro: ^1.0.0 || ^2.0.0-beta
     dependencies:
-      astro: 2.1.3_@types+node@18.15.3
+      astro: 2.1.3_@types+node@18.15.5
       lite-youtube-embed: 0.2.0
     dev: false
 
@@ -120,7 +120,7 @@ packages:
       astro: ^2.1.0
     dependencies:
       '@astrojs/prism': 2.1.1
-      astro: 2.1.3_@types+node@18.15.3
+      astro: 2.1.3_@types+node@18.15.5
       github-slugger: 1.5.0
       image-size: 1.0.2
       import-meta-resolve: 2.2.2
@@ -191,7 +191,7 @@ packages:
       tailwindcss: ^3.0.24
     dependencies:
       '@proload/core': 0.3.3
-      astro: 2.1.3_@types+node@18.15.3
+      astro: 2.1.3_@types+node@18.15.5
       autoprefixer: 10.4.14_postcss@8.4.21
       postcss: 8.4.21
       postcss-load-config: 4.0.1_postcss@8.4.21
@@ -757,7 +757,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.1
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
       '@types/yargs': 16.0.5
       chalk: 4.1.2
     dev: true
@@ -902,7 +902,7 @@ packages:
     resolution: {integrity: sha512-4wMPu9iN3/HL97QblBsBay3E1etIciR84izI3U+4iALY+JHCrI+a2jO0qbAZ/nxKoegypYEaiiqWXylm+/zfrw==}
     dev: true
 
-  /@netlify/build/29.7.0_@types+node@18.15.3:
+  /@netlify/build/29.7.0_@types+node@18.15.5:
     resolution: {integrity: sha512-N3lPfpib0g1GnF+w5INswTpT1LHP1x/+1utGGNdCgpBhOstYbLRG72OPt2Iwi1MKroG7X1S7Q3jRRykFbuSXGQ==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
@@ -956,7 +956,7 @@ packages:
       supports-color: 9.3.1
       terminal-link: 3.0.0
       tmp-promise: 3.0.3
-      ts-node: 10.9.1_cbfmry4sbbh4vatmdrsmatfg5a
+      ts-node: 10.9.1_345kigqis4fipgyy5xb3ndshmq
       typescript: 4.9.5
       uuid: 8.3.2
       yargs: 17.7.1
@@ -1845,7 +1845,7 @@ packages:
     dependencies:
       '@types/http-cache-semantics': 4.0.1
       '@types/keyv': 3.1.4
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
       '@types/responselike': 1.0.0
     dev: true
 
@@ -1867,7 +1867,7 @@ packages:
   /@types/decompress/4.2.4:
     resolution: {integrity: sha512-/C8kTMRTNiNuWGl5nEyKbPiMv6HA+0RbEXzFhFBEzASM6+oa4tJro9b8nj7eRlOFfuLdzUU+DS/GPDlvvzMOhA==}
     dependencies:
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
     dev: true
 
   /@types/download/8.0.2:
@@ -1875,7 +1875,7 @@ packages:
     dependencies:
       '@types/decompress': 4.2.4
       '@types/got': 9.6.12
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
     dev: true
 
   /@types/estree-jsx/1.0.0:
@@ -1891,13 +1891,13 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
     dev: true
 
   /@types/got/9.6.12:
     resolution: {integrity: sha512-X4pj/HGHbXVLqTpKjA2ahI4rV/nNBc9mGO2I/0CgAra+F2dKgMXnENv2SRpemScBzBAI4vMelIVYViQxlSE6xA==}
     dependencies:
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
       '@types/tough-cookie': 4.0.2
       form-data: 2.5.1
     dev: true
@@ -1918,7 +1918,7 @@ packages:
   /@types/http-proxy/1.17.10:
     resolution: {integrity: sha512-Qs5aULi+zV1bwKAg5z1PWnDXWmsn+LxIvUGv6E2+OOMYhclZMO+OXd9pYVf2gLykf2I7IV2u7oTHwChPNsvJ7g==}
     dependencies:
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
     dev: true
 
   /@types/istanbul-lib-coverage/2.0.4:
@@ -1943,7 +1943,7 @@ packages:
   /@types/keyv/3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
     dev: true
 
   /@types/mdast/3.0.10:
@@ -1970,7 +1970,7 @@ packages:
   /@types/node-fetch/2.6.2:
     resolution: {integrity: sha512-DHqhlq5jeESLy19TYhLakJ07kNumXWjcDdxXsLUMJZ6ue8VZJj4kLPQVE/2mdHh3xZziNF1xppu5lwmS53HR+A==}
     dependencies:
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
       form-data: 3.0.1
     dev: true
 
@@ -1978,8 +1978,8 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: true
 
-  /@types/node/18.15.3:
-    resolution: {integrity: sha512-p6ua9zBxz5otCmbpb5D3U4B5Nanw6Pk3PPyX05xnxbB/fRv71N7CPmORg7uAD5P70T0xmx1pzAx/FUfa5X+3cw==}
+  /@types/node/18.15.5:
+    resolution: {integrity: sha512-Ark2WDjjZO7GmvsyFFf81MXuGTA/d6oP38anyxWOL6EREyBKAxKoFHwBhaZxCfLRLpO8JgVXwqOwSwa7jRcjew==}
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -1994,7 +1994,7 @@ packages:
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
     dev: true
 
   /@types/retry/0.12.1:
@@ -2004,7 +2004,7 @@ packages:
   /@types/sax/1.2.4:
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
     dependencies:
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
     dev: true
 
   /@types/semver/7.3.13:
@@ -2014,7 +2014,7 @@ packages:
   /@types/sharp/0.31.1:
     resolution: {integrity: sha512-5nWwamN9ZFHXaYEincMSuza8nNfOof8nmO+mcI+Agx1uMUk4/pQnNIcix+9rLPXzKrm1pS34+6WRDbDV0Jn7ag==}
     dependencies:
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
     dev: true
 
   /@types/tough-cookie/4.0.2:
@@ -2041,7 +2041,7 @@ packages:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
     dev: true
     optional: true
 
@@ -2557,7 +2557,7 @@ packages:
       '@astro-community/astro-embed-twitter': 0.2.2_astro@2.1.3
       '@astro-community/astro-embed-vimeo': 0.1.2_astro@2.1.3
       '@astro-community/astro-embed-youtube': 0.2.2_astro@2.1.3
-      astro: 2.1.3_@types+node@18.15.3
+      astro: 2.1.3_@types+node@18.15.5
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -2566,7 +2566,7 @@ packages:
     resolution: {integrity: sha512-8Yo1nQrl2iB5zj+VUAHrvGIck8bZ4WAmXQgJOeF9FuAZGQD5qK6DtSZaRbpBXsFfZYHA6tE8pjs3btHhLbC1zQ==}
     dev: true
 
-  /astro/2.1.3_@types+node@18.15.3:
+  /astro/2.1.3_@types+node@18.15.5:
     resolution: {integrity: sha512-5LFo/ixDXs84tgrSbzz0X5c7nzLfkag7w4tgOpBRL/DkveP83v+nSe3KjqwYLPL5vNY9UvryKHsfC0uu4TQz0g==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
@@ -2626,7 +2626,7 @@ packages:
       typescript: 5.0.2
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.2.0_@types+node@18.15.3
+      vite: 4.2.0_@types+node@18.15.5
       vitefu: 0.2.4_vite@4.2.0
       yargs-parser: 21.1.1
       zod: 3.21.4
@@ -7488,14 +7488,14 @@ packages:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
 
-  /netlify-cli/13.1.6_@types+node@18.15.3:
+  /netlify-cli/13.1.6_@types+node@18.15.5:
     resolution: {integrity: sha512-dn9NYfLLzBi/Bph9wccpbR/90Yh6xutHzdl9J06XfcYsgpQOhEE9qAHUppzzJnHXUJEi7PAMo0lkXExvVO4zhA==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
     requiresBuild: true
     dependencies:
       '@fastify/static': 6.9.0
-      '@netlify/build': 29.7.0_@types+node@18.15.3
+      '@netlify/build': 29.7.0_@types+node@18.15.5
       '@netlify/config': 20.3.6
       '@netlify/edge-bundler': 8.12.2
       '@netlify/framework-info': 9.8.5
@@ -10151,7 +10151,7 @@ packages:
   /trough/2.1.0:
     resolution: {integrity: sha512-AqTiAOLcj85xS7vQ8QkAV41hPDIJ71XJB4RCUrzo/1GM2CQwhkJGaf9Hgr7BOugMRpgGUrqRg/DrBDl4H40+8g==}
 
-  /ts-node/10.9.1_cbfmry4sbbh4vatmdrsmatfg5a:
+  /ts-node/10.9.1_345kigqis4fipgyy5xb3ndshmq:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -10170,7 +10170,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
       acorn: 8.8.2
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -10598,7 +10598,7 @@ packages:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  /vite/4.2.0_@types+node@18.15.3:
+  /vite/4.2.0_@types+node@18.15.5:
     resolution: {integrity: sha512-AbDTyzzwuKoRtMIRLGNxhLRuv1FpRgdIw+1y6AQG73Q5+vtecmvzKo/yk8X/vrHDpETRTx01ABijqUHIzBXi0g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -10623,7 +10623,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.15.3
+      '@types/node': 18.15.5
       esbuild: 0.17.12
       postcss: 8.4.21
       resolve: 1.22.1
@@ -10639,7 +10639,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.2.0_@types+node@18.15.3
+      vite: 4.2.0_@types+node@18.15.5
 
   /vscode-css-languageservice/6.2.4:
     resolution: {integrity: sha512-9UG0s3Ss8rbaaPZL1AkGzdjrGY8F+P+Ne9snsrvD9gxltDGhsn8C2dQpqQewHrMW37OvlqJoI8sUU2AWDb+qNw==}
