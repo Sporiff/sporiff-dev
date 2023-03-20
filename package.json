@@ -24,7 +24,7 @@
     "@astrojs/rss": "2.3.0",
     "@types/node": "18.15.3",
     "astro-embed": "0.2.1",
-    "rollup": "3.19.1",
+    "rollup": "3.20.0",
     "tailwindcss": "3.2.7"
   }
 }
