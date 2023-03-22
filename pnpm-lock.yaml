@@ -12,7 +12,7 @@ specifiers:
   astro-compress: 1.1.35
   astro-embed: 0.2.1
   astro-seo: 0.7.1
-  netlify-cli: 13.2.0
+  netlify-cli: 13.2.1
   rollup: 3.20.0
   tailwindcss: 3.2.7
 
@@ -32,7 +32,7 @@ devDependencies:
   astro: 2.1.5_@types+node@18.15.5
   astro-compress: 1.1.35
   astro-seo: 0.7.1
-  netlify-cli: 13.2.0_@types+node@18.15.5
+  netlify-cli: 13.2.1_@types+node@18.15.5
 
 packages:
 
@@ -7502,8 +7502,8 @@ packages:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
 
-  /netlify-cli/13.2.0_@types+node@18.15.5:
-    resolution: {integrity: sha512-ifCfjqLsmtoYJiKsYBN3BpoyNyC+NsgAN5wq1rkr7XCMovd9nB7UyXCFwDFP4Xges3ZGmY8FCtru6zO1yajZ4A==}
+  /netlify-cli/13.2.1_@types+node@18.15.5:
+    resolution: {integrity: sha512-SPBEJ5JjhPJwTu+IBjkpaX98H9l3Yq5JpFgc7VNT/tnvQ9eBzRcv+jVJpuVD6x4J+YNeQPAekKejfdY6InUfcQ==}
     engines: {node: ^14.16.0 || >=16.0.0}
     hasBin: true
     requiresBuild: true
