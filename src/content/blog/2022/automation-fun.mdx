@@ -1,0 +1,86 @@
+---
+author: Ciarán Ainsworth
+title: Automation Fun
+pubDate: 2022-04-25T22:57:32+02:00
+tags:
+  - blog
+  - tech
+description: Part of the fun of technical writing is figuring out how you can do less of it.
+image: /images/sdk_site.webp
+alt: A screenshot of a website containing SDK class documentation
+---
+
+Part of the fun of technical writing is figuring out how you can do less of it. Specifically when it comes to developer documentation. Writing out things like tables of variables, class references, etc. gets really tedious. It's also fragile, and your work can quickly go out of date.
+
+At work I currently have two challenges ahead of me:
+
+- Documenting RESTful APIs.
+- Documenting SDKs for various mobile platforms and frameworks.
+
+## RESTful APIs
+
+Now, RESTful APIs are pretty well understood in the technical communication world. We can use OpenAPI generators such as [Redoc](https://redoc.ly) and [Swagger](https://swagger.io) to create aesthetically pleasing documentation directly from endpoint code. Pretty neat stuff.
+
+However, these tools aren't without their limitations. First and foremost, they leave no room for prosaic documentation. They're a fantastic reference for developers looking for a technical breakdown of how endpoints work, but they're poor at giving context to less technical users. These users tend to prefer approachable documentation populated with clear examples and written explanations. Redoc and Swagger simply don't do this.
+
+The other glaring flaw in OpenAPI generators actually comes from OpenAPI itself. The standard [still doesn't support i18n](https://github.com/OAI/OpenAPI-Specification/issues/1740). In an international business or project, this isn't really acceptable.
+
+So we're basically left with two options:
+
+1. Generate OpenAPI documentation for endpoints and maintain user documentation alongside it.
+2. Stick with using written documentation.
+
+As long as we can grab information from endpoints at build time, neither of these solutions are terrible, but it still feels like a poor stopgap solution. We're still maintaining too much by hand, and developers aren't always getting the benefit of up-to-date information that aligns perfectly with the API. What a kerfuffle.
+
+## SDK documentation
+
+In the short time I've been doing this job, I've found SDK documentation to be the hardest thing to tackle. Quite frankly there are no good solutions for working with lots of different frameworks and languages. Once again it seems to fall to writers to maintain their documentation almost entirely separately from the code itself. This can lead to discrepancies between what the code can do and what we tell people it can do.
+
+For many languages (Objective-C, C#, Java) we can use an array of generators to create reference documentation. [Javadoc](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html), [Appledoc](https://github.com/tomaz/appledoc), and [Doxygen](https://www.doxygen.nl/index.html) can all create HTML documentation of class references and APIs for documentation. Doxygen in particular is a good choice because of the number of languages it supports.
+
+But once again we hit the issue of the target audience. Some developers are perfectly content to just read class definitions and be done with it. But some want a more explanatory approach with contextualized examples. Also, none of these tools support i18n, again. This means that switching to these vs. a version that we maintain with our localization team cuts off a large audience. Ugh.
+
+## What's the solution?
+
+No idea, really. But I've been toying with the idea of using a static site generator such as [Hugo](https://gohugo.io) to keep everything together. Since we can access information from the `data` directory of a Hugo site, we can potentially do some really neat stuff. For example, I can import an OpenAPI spec and with a very simple shortcode I can populate the parameters for any given endpoint.
+
+```html
+{{ $endpoint := (.Get "endpoint") }} {{ $method := (.Get "method") }} {{ $range := index .Site.Data.openapi.paths
+$endpoint $method }}
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>In</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  {{ range $range.parameters }}
+  <tr>
+    <td>
+      {{ if .required }}
+      <span><code>{{ .name }}</code></span>
+      <div class="required">required</div>
+      {{ else }}
+      <code>{{ .name }}</code>
+      {{ end }}
+    </td>
+    <td>{{ .in }}</td>
+    <td>{{ .schema.type }}</td>
+    <td>{{ .description | safeHTML }}</td>
+    {{ end }}
+  </tr>
+</table>
+```
+
+Then it's a simple matter of calling this in a markdown file.
+
+```go
+{{</* data-table endpoint="/report" method="get" */>}}
+```
+
+Since these are just Markdown files, it's easy to write up good documentation alongside these. i18n is also a doddle for these instructions, but not so much for the API code. My thinking is that localizers could populate JSON files containing the name and description of a parameter in their language, then pass a language parameter in the shortcode invocation to trigger some additional logic. I've not written this up yet, but I see no reason it couldn't work.
+
+SDK docs would be more tricky, but not insurmountable. In theory the same logic applies only with XML (Doxygen's output). XML is the devil, but it is at least a structured data format.
+
+There's lots of things to consider here. For example there needs to be steps in the build process to generate these files, the outputs need to plug in to the localization platform, etc. etc. But it does seem that there's no oven ready solution for the type of thing I'm trying to do and Hugo just happens to make it easy to try out fun new things.

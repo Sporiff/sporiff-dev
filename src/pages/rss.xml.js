@@ -1,18 +1,21 @@
 import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
+import sanitizeHtml from 'sanitize-html';
+import MarkdownIt from 'markdown-it';
+const parser = new MarkdownIt();
 
-export const get = () => rss({
-    stylesheet: '/rss/styles.xsl',
-    // `<title>` field in output xml
+export async function get(context) {
+  const blog = await getCollection('blog');
+  blog.sort((b, a) => Date.parse(a.data.pubDate) - Date.parse(b.data.pubDate));
+  return rss({
     title: 'Sporiff.dev',
-    // `<description>` field in output xml
     description: 'Life inside a computer',
-    // base URL for RSS <item> links
-    // SITE will use "site" from your project's astro.config.
-    site: import.meta.env.SITE,
-    // list of `<item>`s in output xml
-    // simple example: generate items for every md file in /src/pages
-    // see "Generating items" section for required frontmatter and advanced use cases
-    items: import.meta.glob('./posts/**/*.mdx'),
-    // (optional) inject custom xml
-    customData: `<language>en-us</language>`,
+    site: context.site,
+    stylesheet: '/rss/styles.xsl',
+    items: blog.map((post) => ({
+      link: `/blog/${post.data.title.replaceAll(' ', '-').toLowerCase()}/`,
+      content: sanitizeHtml(parser.render(post.body)),
+      ...post.data,
+    })),
   });
+}

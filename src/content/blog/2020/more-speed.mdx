@@ -1,0 +1,32 @@
+---
+author: Ciarán Ainsworth
+title: More speed improvements
+pubDate: 2020-05-28T02:39:15.000Z
+tags:
+  - speed
+  - website
+  - design
+  - technology
+description: Checking Lighthouse tests is a dangerous thing for your free time.
+image: /images/lighthouse.webp
+---
+
+A little while ago I made some [significant changes](site-speed-improvements) to this website's design, asset delivery, and [build system](building-smarter) Recently, however, I decided to do some benchmarking against a friend's site to see how it stacked up and I was surprised to see that my site was still significantly slower than it could be, and it was also failing some Lighthouse tests when run through Chromium. I decided to take the time to fix these recently and have made the following changes:
+
+- The site is now served over HTTP/2 by default (I don't know how or why I missed this in the first place)
+- The site now uses generic fonts such as monospace and serif rather than loading custom fonts. This has the
+  added benefit of making it better for accessibility and end-user customization
+- The CSS has been put through the ringer to ensure that absolutely no unused rules are included, allowing me
+  to shrink the resulting minified file by about 2.5kb
+- The favicon, previously a multilayered `.ico` file is now served as a much smaller single layer `.png` (I
+  don't think there was any reason that I was keeping the multi-layered version around since it's only used
+  in the header bar)
+- The footer CC BY-SA 4.0 banner image has been replaced by a single link
+
+As a result of all these changes, the site should now load twice as fast. Obviously, images still take some time to load but given the changes made in the build process this should not block a page's load (I only rarely use images as an illustrative tool anyway, so they're not really essential).
+
+One other important thing I was able to do as part of this most recent sweep of changes is ensure that the site's colour scheme is up-to-code with accessibility rules. Since the scheme was pretty much directly copied from Plan 9 I didn't really doubt that this would be the case, but it's good to make sure. I've updated the CSS to make all colours variables now, so should I choose to implement different themes in future it should be trivial to implement these.
+
+My site still isn't as fast as my friend's (he just has a much smaller stylesheet, there's not much I can do there), but I do score a lot higher on accessibility. I'm going to call that a win for today.
+
+![A screenshot of a Google Lighthouse report showing scores of 100 in each category](/images/lighthouse.webp)

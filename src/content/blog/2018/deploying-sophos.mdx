@@ -1,0 +1,42 @@
+---
+author: Ciarán Ainsworth
+title: Deploying Sophos in a production environment
+pubDate: 2018-05-08T00:00:00+01:00
+tags: 
+   - sophos
+   - sysadmin
+   - tech
+   - antivirus
+   - sccm
+   - azure
+   - intune
+description: AntiVirus is a necessary evil. Deploying it is an unnecessary headache.
+---
+
+AntiVirus is a necessary evil. With the world more connected than ever before, every device needs protection and tools to allow administrators oversight. Currently, the AV I work with is Sophos' cloud-based solution for Windows, Mac, and Linux. When I was working on the frontline, I quickly became aware that Sophos did not deploy during imaging as it had initially done, nor could it easily be pushed out via SCCM. We spent a long time going around to each freshly imaged machine and loading Sophos on, rebooting the machine, and logging tickets to have its policy applied. This did not sit right with me, so upon my move to the systems team I decided to have a crack at simplifying the process.
+
+## Build deployment
+
+The issue, I soon discovered, was not one of packaging or deployment, but rather time. Sophos' installer goes out of date every 30 days, at which point a new executable needs to be downloaded for any new deployments. Understandably, this was not a practical solution for our application manager. Given my GNU/Linux background, the solution seemed straightforward enough: write a script to handle download and installation as one does with the Linux client. However, while this was easily facilitated by PowerShell's `Invoke-WebRequest` cmdlet on Windows 10, Windows 7's older (v2) Powershell had no such functionality. So we were faced with a dilemma: upgrade PowerShell or find a way to script the download and install in an older environment.
+
+The first option seemed the best to both of us, as more PowerShell features for technicians on a machine could be useful in the long run. However, we encountered endless issues trying to deploy the upgrade packages in the OSD, so eventually I sat down to work out the script in .NET. The result was a much less clean but still functional PowerShell script.
+
+Both of these scripts can be found on my [GitHub](https://github.com/Sporiff/sophos-install).
+
+## Protecting macOS
+
+macOS is somewhat more familiar to me than Windows due to its Unix base, but I was not yet used to working with DeployStudio to image macOS devices. I decided that if I could automate deployment for Windows, the same must be easy enough on macOS. Certainly, the download command curl is a lot more familiar to me than `Invoke-WebRequest`, however the installation of Sophos from a `.zip` required many more steps than simply executing a `.exe` like in Windows. More importantly, I came across another issue.
+
+[Sophos had reported](https://community.sophos.com/kb/en-us/131749) a change to their installer which caused it to conflict with the default permissions set by DeployStudio during imaging. For this reason, it was necessary to edit the workflow thus: place the installer script in as a delayed script to run after first boot, then place a chmod script at the end of the sequence to run as the last step of the initial build process. Lo and behold, a working Sophos install.
+
+Both of these scripts can be found in this [GitHub repo](https://github.com/Sporiff/sophos-mac).
+
+## Clearing false positives
+
+This one may be seen by some as a bit of a nasty hack, but unfortunately Sophos – like any software – is imperfect. By default, the AV will quarantine or clean up PUAs and viruses from a host machine and report the status of this operation in the console, usually with a yellow exclamation triangle for medium status or a red exclamation circle for bad status. Usually, manually clearing out these problems is sufficient to repair the status, but sometimes the Sophos Health service gets, well, stuck.
+
+Clearing this one is a little messy, as I say, but it's quite simple. First, the technician should verify that the threat has indeed been cleared. Then, tamper protection should be disabled on the affected machine. This is to allow the technician to stop the Sophos Health service, rename the stuck database, and re-enable the service. Tamper protection should then be enabled and the machine reset. Voilà! A nice green tick in Sophos Central.
+
+## Going forward
+
+Working with Sophos is something of an adventure. Due to the fact that it is cloud-based, it is always evolving. Sometimes, the changes are welcome – like a long-awaited fix for a problem – but other times they can present new challenges to which you will quickly need to adapt your environment. With a little scripting, Sophos management for endpoints becomes a lot easier.

@@ -1,0 +1,31 @@
+---
+author: Ciarán Ainsworth
+title: Burnout
+pubDate: 2020-07-20T07:41:21.000Z
+tags:
+  - personal
+  - blog
+  - mental health
+description: In December 2019, I was given a new role at work. This was with the understanding that there would need to be a transition period while I trained my replacement, but that I could expect to be out of my current role within 6 months...
+---
+
+In December 2019, I was given a new role at work. This was with the understanding that there would need to be a transition period while I trained my replacement (I work with a very big, poorly documented product, which means that training is a very big task), but that I could expect to be out of my current role within 6 months.
+
+7 months later, we have not even appointed somebody to the new role.
+
+Now, of course the COVID pandemic has had a big role to play in this as the business has had to scramble to work out how it functions as a remote workplace and the hiring market is unsurprisingly much sparser than previously. However, my expectations had been structured and I expected the business to make good on this with a slight delay.
+
+Following a series of interviews we had found some very promising candidates and were looking forward to hiring one in particular, who unfortunately had to turn the role down due to moving away. This was a great shame, but I had been assured that in this circumstance we would hire our second choice so that we could get the ball rolling on the training and my transfer. This didn't happen, however, and we are now back to the drawing board.
+
+All the while, I have had more work piled on top of me. I am already closing down 2/3 of the business' total support tickets by myself, as well as being responsible for the design and upkeep of our help centre platform and filling in the role of the business' technical writer (I currently have a project to document our dozens of API endpoints, all without access to the code. Fun.). But now, on top of this, I am being given work to do which relates to my new role including customer calls, project scoping and quoting, and more bespoke technical writing.
+
+As a result, I have almost completely shut down over the last month or so. I've not communicated much with anyone outside of a few interactions within the Funkwhale community. I have been able to achieve very little in terms of my own personal projects, and have made basically no progress in my personal or professional development. I have developed an odd sensation whenever I close my eyes that I am falling, which means I now only get about 3-4 hours of sleep a night due to not being able to fall asleep until I am so exhausted I can no longer function. This is also making it harder to work the next day so I'm falling behind.
+
+Anyhow. This is just me venting really. I'm annoyed at myself for letting my work have this great an impact on my life, and for not being able to keep fighting through it with vim and vigour, but that is how it is.
+
+Some of the small things I have been able to achieve lately:
+
+- I've implemented a dark theme on this site which should follow your device's colour scheme preference
+- I've added a Funkwhale feature to my Matrix chatbot which allows you to search for `%track`s, `%album`s, and `%artist`s from within a chatroom by supplying your Funkwhale endpoint. At some point I'll look at implementing Oauth and potentially make it more generically useful so I can split it off as its own Matrix bot
+- I've fixed an annoying bug with this site where code boxes didn't render properly on smaller devices using Chrome. Every other browser worked fine, just Chromium-based browsers took issue with the `pre-wrap: whitespace` setting so I had to do some fiddling to find a solution that worked on all browsers. Long story short: stop using Chromium. It's absolute dogshit
+- I've fixed a couple of minor issues on Funkwhale, namely [an issue with the playbar rendering on landscape tablet devices](https://dev.funkwhale.audio/funkwhale/funkwhale/-/merge_requests/1167), [an issue with artist embedding not working properly](https://dev.funkwhale.audio/funkwhale/funkwhale/-/merge_requests/1166), and [support for unauthenticated users hitting the logout page directly](https://dev.funkwhale.audio/funkwhale/funkwhale/-/merge_requests/1168). Just a few small things, but it feels good to get something done

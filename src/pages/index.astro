@@ -1,0 +1,20 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section>
+    <div class="container">
+      <div class="grid grid-cols-1">
+        <div class="space-content flex flex-col justify-center prose dark:prose-invert prose-2xl max-w-none">
+          <h2>About me</h2>
+          <p>Hi! My name’s Ciarán. I’m a technical writer and programmer based in Berlin.</p>
+          <p>I’ve been working with computers since I was very young and have made the mistake of making them my career. I sometimes take notes on the frustrations I come up against and complain about various things that have displeased me on any given day. I change my mind a lot, though, so don’t be surprised if something I have previously praised ends up the subject of my ire.</p>
+          <p>In my spare time, I contribute to a few projects – notably <a href="https://funkwhale.audio">Funkwhale</a>. I also host a <a href="https://tanukitunes.com">popular Funkwhale pod</a> for podcasters, musicians, and listeners.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

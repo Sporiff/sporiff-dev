@@ -1,0 +1,42 @@
+---
+author: Ciarán Ainsworth
+title: Python programming
+pubDate: 2020-05-16T23:00:00.000Z
+tags:
+  - python
+  - programming
+  - gtk
+description: I've been having some fun learning Python recently as part of a course I'm doing. One of our early assignments was to create a simple saponification calculator which would return the amount of lye and water required to make soap from some given oils.
+---
+
+import Video from '@components/Video.astro'
+
+<Video link="/videos/soap_calculator.webm" type="video/webm" />
+
+I've been having some fun learning Python recently as part of a course I'm doing. One of our early assignments was to create a simple saponification calculator which would return the amount of lye and water required to make soap from some given oils.
+
+My personal goal in all of this is to be able to make graphical programs, as I always seem to fall at that hurdle. I've made terminal-based scripts and apps in the past, but have always given up with the creation of a GUI due to not understanding how on earth you get a front-end to talk to a back-end.
+
+After spending some time with [Glade](https://glade.gnome.org/) and the excellent [GTK developer documentation](https://www.gtk.org/docs/) (and by time I mean I started this rewrite at 7PM and ended up with something workable at 7AM), I am finally getting a handle on how these things talk to one another and work together.
+
+Something I'd never really considered was just how different interacting with applications in the terminal and on the front-end is. With a terminal app things are fairly sequential and predictable, but when you start putting things into an interface it becomes a completely different process. The [original script](https://github.com/Sporiff/soap-calculator/tree/ae2bca34dd2dbae7db4f31d7e45e44b8597b5df9/soap_calculator.py) essentially just ran through each part in sequence:
+
+- Enter a value for olive oil
+- Enter a value for coconut oil
+- Select whether or not to use lye reduction
+- Calculate results
+
+But with a GUI application, it's possible to have all of the inputs accessible at once, and the expectation of the user will be to have either:
+
+- A button that performs the calculation once everything is filled in
+- A calculation performed whenever a value is changed
+
+For the challenge of it, I opted for the latter, which meant that at every turn entries had to be sanitized and handled synchronously. What I had originally thought would be a simple case of just attaching a front end to a script basically left me with a completely different program with a different project structure and set of tools. The only thing that remained consistent was the maths.
+
+I've learned a lot about Python recently, to the point where I'm starting to think about work projects in terms of how they could be simplified using the language. The important thing, I think, is to make sure I know ahead of time whether I expect to use a GUI or not, as it has a massive impact on how everything is set up.
+
+I will say that there is a relatively small amount of documentation available for Python + Glade, and a lot of the documentation that is available is aging badly (Python 2.7, anyone?). However, a lot of the blanks can be filled in by reading documentation for Glade and other languages like C and Vala to get an idea of how the elements interact with the language, then simply convert that to your Python thinking.
+
+Is [my code](https://github.com/Sporiff/soap-calculator) good? No. It badly needs to be refactored and cleaned up. But for a 12-hour sprint with a tool I've never used before I'm pretty happy with it. Of course, the moment I use it on a different DE the theming falls apart but oh well...
+
+Next up: learning how to package this stuff.

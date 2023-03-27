@@ -1,0 +1,30 @@
+---
+author: Ciarán Ainsworth
+title: Roswell for everyone!
+pubDate: 2020-06-02T23:00:00.000Z
+tags:
+  - freebsd
+  - lisp
+  - roswell
+description: It felt like time to give something back to the communities I've been enjoying recently.
+---
+
+This website uses [coleslaw](https://github.com/coleslaw-org/coleslaw) as a static site generator. Coleslaw is managed using [Roswell](https://github.com/roswell/roswell). Some of my bots are written in lisp and packaged using Roswell. It's safe to say I like Roswell.
+
+As mentioned a [little while ago](playing-with-ports) I've been teaching myself how to write FreeBSD ports. Since I run this site on a FreeBSD box, it is only logical that I would try to package the tools I'm using. So back in February I managed to get a port for roswell working and submitted it for review. Yesterday I got an email from a port committer asking me to confirm my email address as I'd recently set up my own mail server and it was now different to the maintainer address listed in the port. To be honest, I'd pretty much forgotten I'd even submitted it at this point, and decided to bring everything up-to-date including my email address and the most recent version of the package. By this evening, the port had been committed and I could install roswell direct from the ports tree \o/
+
+So, yes. Long story short, if you're looking to install Roswell on FreeBSD this is now possible with a simple:
+
+```sh
+$ cd /usr/ports/devel/roswell
+$ sudo make install
+```
+
+Or to run it locally (as you should)
+
+```sh
+$ cd /usr/ports/devel/roswell
+$ sudo make PREFIX=/usr/home/<username>/.local install
+```
+
+Tara!
