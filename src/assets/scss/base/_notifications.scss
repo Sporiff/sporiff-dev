@@ -1,0 +1,55 @@
+body {
+  .notification {
+    color: var(--neutral-900, #202427);
+    background-color: var(--neutral-200, #f6f8f9);
+    border: 2px solid var(--neutral-600, #858d93);
+
+    & a {
+      color: inherit;
+    }
+
+    &.type-info {
+      color: var(--info-900, #035486);
+      background-color: var(--info-100, #e0f7ff);
+      border-color: var(--info-600, #1a91d1);
+
+      & a {
+        color: inherit;
+      }
+    }
+
+    &.type-success {
+      color: var(--success-900, #014b3e);
+      background-color: var(--success-100, #eefcf6);
+      border-color: var(--success-500, #28a980);
+
+      & a {
+        color: inherit;
+      }
+    }
+
+    &.type-warning {
+      color: var(--warning-900, #8e2a0b);
+      background-color: var(--warning-100, #fffbeb);
+      border-color: var(--warning-600, #dc901e);
+
+      & a {
+        color: inherit;
+      }
+    }
+
+    &.type-error {
+      color: var(--error-900, #5e0317);
+      background-color: var(--error-100, #ffe0e0);
+      border-color: var(--error-500, #df2a39);
+
+      & a {
+        color: inherit;
+      }
+    }
+
+    & p strong {
+      color: inherit;
+    }
+  }
+}
