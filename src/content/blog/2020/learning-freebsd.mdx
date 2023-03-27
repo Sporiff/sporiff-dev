@@ -1,0 +1,57 @@
+---
+author: Ciarán Ainsworth
+title: Learning FreeBSD
+pubDate: 2020-02-09T17:00:50.000Z
+tags:
+  - freebsd
+  - bsd
+  - unix
+  - free software
+images: /images/i3.webp
+description: Things are never as simple as you think they're going to be.
+---
+
+![A screenshot of a customized i3-gaps interface](/images/i3.webp)
+
+As mentioned in an [earlier post](moving-to-freebsd), I've recently started hosting this site on a FreeBSD box to help me learn FreeBSD a little bit better and become a bit more bilingual with my UNIX-like systems. I had initially planned to install FreeBSD on my X200s, but unfortunately the OS was not supported by Libreboot, so I tabled the idea for a while.
+
+The issue with this, of course, was that by limiting my use of FreeBSD to one very small server which had very little to do I would not really get to experience the benefits, drawbacks, and differences the system offered when compared with GNU and non-GNU Linux. No, if I wanted to get a real taste of the system, I had to get it installed on something that I could actually use day-to-day.
+
+## The dilemma
+
+![An image of a Lenovo X200 running Libreboot](/images/libreboot.webp)
+
+This X200s laptop was purchased specifically for its ability to run [Libreboot](https://libreboot.org/), a libre software replacement for proprietary BIOS/UEFI implementations. While Libreboot has served me very well for the time that I've owned this laptop, the project seems to have slowed to a crawl. There has been no release in nearly 4 years, and the new project to which it was due to rebase has seen no development in over 3 years, so the likelihood of seeing a new release feels somewhat remote. Work is certainly still being done, but the pace is glacial and certain issues are unlikely to ever be resolved.
+
+Libreboot currently uses another project as its upstream: [Coreboot](https://www.coreboot.org/). Similar to how [Linux-Libre](https://www.gnu.org/software/linux-libre/) operates, Libreboot strips any proprietary remnants out of Coreboot in order to ensure that your boot firmware is as free as possible. However, this means that:
+
+1. The supported hardware list is very short
+2. The supported software list is somewhat limited
+
+As mentioned, I don't really have to worry too much about point #1 as I have one of the pieces of equipment that is supported fully by the project. However, after several attempts to get FreeBSD running after reflashing Libreboot back to text mode, it became apparent that it simply was not supported.
+
+## The solution
+
+Luckily, it seems I was not the only person who'd sought to scratch this particular itch, and the solution came in the form of a rather excellent [blog post by Staf Wagemakers](https://stafwag.github.io/blog/blog/2019/10/17/switch-libreboot-to-coreboot/) detailing the process of switching from Libreboot and GRUB to Coreboot and SeaBIOS, which fully supports FreeBSD.
+
+So, after a slightly nerveracking evening of working through the post and tuning the different instructions to my hardware, I managed to replace Libreboot with Coreboot and get SeaBIOS up-and-running. After some fiddling about, I had the BIOS recognising my USB stick and was ready to boot.
+
+## The easy bit
+
+The FreeBSD installation process is gloriously simple, with a few exceptions. Most things can easily be gleaned directly from the instructions presented on screen at install time, although some other parts (such as WiFi selection) take a bit of reading to grok. Once you've got it, though, it makes complete sense and the system installation process is a breeze. The `chroot`ing in to the system at the end was also a nice touch (similar to what you see in something like [Anarchy Linux](https://www.anarchylinux.org/).
+
+Of course, the most arduous bit of any \*BSD/non-automated Linux installation is the set up and tweaking of Xorg, which gave me the usual troubles as it shouted at me that my monitors didn't match what it was looking for. After some reading of the FreeBSD Xorg manual I managed to get my config file generated and was able to boot into a minimal X system. Huzzah!
+
+## Maintaining consistency
+
+I tend to use i3-gaps, and more specifically a modified version of [LARBS](https://larbs.xyz) (I know, I know, it's a meme). Now, this rice has been specifically tailored to Arch/Void Linux, but with a little bit of tweaking it is relatively trivial to replace everything with a FreeBSD equivalent. Some of the status bar blocks will not work by default as they are looking for pointedly Linux features. Some of these have immediate replacements (such as the battery indicator, a helpful example of which is installed alongside i3blocks), but some others don't really. The most annoying one is the volume indicator, which can easily be controlled by switching out your pulse/alsa controls for something like:
+
+```sh
+$ exec --no-startup-id mixer -S vol +5% && pkill -RTMIN+10
+```
+
+but this does not update the status. For some reason, the `pkill` command I've set up does not automatically update the status. For now, I've simply set a more frequent update but I'll have a go at working out why it's not working soon.
+
+Apart from that, I've been very impressed. The ports system is incredibly comfortable to use, as is installing binary packages using `pkg`. With few exceptions everything I use on a day-to-day basis is available and needs little modification to get working how I'm used to it.
+
+Now all I have to do is get resume on lid open working...

@@ -1,25 +1,12 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import mdx from "@astrojs/mdx";
-import compress from "astro-compress";
-import sitemap from "@astrojs/sitemap";
+import { defineConfig } from 'astro/config'
+import compress from 'astro-compress'
+import mdx from '@astrojs/mdx'
+import tailwind from '@astrojs/tailwind'
+
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind({ config: { applyBaseStyles: false } }),
-    mdx(),
-    sitemap(),
-    compress(),
-  ],
+  integrations: [compress(), mdx(), tailwind()],
   output: "static",
   site: "https://sporiff.dev",
-  markdown: {
-    syntaxHighlight: "prism",
-  },
-  vite: {
-    ssr: {
-      noExternal: [/@astro-/],
-    },
-  },
-});
+})

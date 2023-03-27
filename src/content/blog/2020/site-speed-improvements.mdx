@@ -1,0 +1,30 @@
+---
+author: Ciarán Ainsworth
+title: Site speed improvements
+pubDate: 2020-04-22T23:00:00.000Z
+tags:
+  - tech
+  - blog
+  - hosting
+  - technology
+  - website
+images: .images/rocket.webp
+---
+
+![A rocket ship! Zoom!](/images/rocket.webp)
+
+I got poking around at this site and was doing some thinking. Mainly along the lines of speed and security. By default, the dark-hyde theme provided by the good folks over at [Coleslaw](https://github.com/coleslaw-org/coleslaw) uses Google's CDN for font delivery. This is all well and good, however I'm really not a big fan of Google at all and like to avoid them where possible. With that in mind, I started thinking about how I could go about replacing them.
+
+The major thing that Google provides on a lot of websites, even those who are privacy-conscious enough not to use abominations like Google analytics, is the serving of fonts and Javascript. Hosting these things through their CDN makes it very straightforward to plug a font or script in without having to worry about hosting the files locally or anything like that. However, it also means that people's browsers are constantly calling out to Google, thereby increasing the web's reliance on them.
+
+To that I say: eff off.
+
+Replacing these fonts was reasonably straightforward thanks to the magical combination of [Digital Ocean's](https://digitalocean.com) CDN and the [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts), which made grabbing the relative files and CSS a breeze. Pointing all parts of my theme file to the newly cached CSS files and migrating all images etc. should speed things up at least a little bit, and best of all: no Google! All fonts should have a backup in case DO is a little slow. It's been known to happen.
+
+The other little hacky thing I did was relates to [my earlier post](building-smarter) about using a git-based workflow to manage the deployment of this site. I'm a fan of the idea of using lazy loading for images since they're not particularly important for this site's content and I'd rather let them just load in their own time. However, Coleslaw only produces raw images from Markdown, with no option to add the `loading` tag. Oh well. This site runs on FreeBSD, baby! Anything is possible. A simple one-liner added to the deployment hook should allow me to stick that in to the files.
+
+```bash
+find . -type f -name "*.html" -print0 | xargs -0 sed -i '' -e 's/<img /<img loading="lazy" /g'
+```
+
+Oh, it's hacky. But it works. I'm not really in the mood to go diving through Lisp code to do this in Coleslaw...
