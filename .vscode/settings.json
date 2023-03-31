@@ -1,0 +1,6 @@
+{
+   "files.associations": {
+      "*.mdoc": "markdoc"
+   },
+   "editor.wordWrap": "on"
+}

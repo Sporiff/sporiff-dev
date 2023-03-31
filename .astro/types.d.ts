@@ -1,5 +1,13 @@
 declare module 'astro:content' {
 	interface Render {
+		'.mdoc': Promise<{
+			Content(props: Record<string, any>): import('astro').MarkdownInstance<{}>['Content'];
+		}>;
+	}
+}
+
+declare module 'astro:content' {
+	interface Render {
 		'.mdx': Promise<{
 			Content: import('astro').MarkdownInstance<{}>['Content'];
 			headings: import('astro').MarkdownHeading[];
@@ -7,6 +15,7 @@ declare module 'astro:content' {
 		}>;
 	}
 }
+
 declare module 'astro:content' {
 	interface Render {
 		'.md': Promise<{
@@ -96,27 +105,27 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"blog": {
-"2018/a-reluctant-return-to-windows.mdx": {
-  id: "2018/a-reluctant-return-to-windows.mdx",
+"2018/a-reluctant-return-to-windows.mdoc": {
+  id: "2018/a-reluctant-return-to-windows.mdoc",
   slug: "2018/a-reluctant-return-to-windows",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/acclimitising-to-new-tech.mdx": {
-  id: "2018/acclimitising-to-new-tech.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/acclimitising-to-new-tech.mdoc": {
+  id: "2018/acclimitising-to-new-tech.mdoc",
   slug: "2018/acclimitising-to-new-tech",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/apple-drink-the-cider.mdx": {
-  id: "2018/apple-drink-the-cider.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/apple-drink-the-cider.mdoc": {
+  id: "2018/apple-drink-the-cider.mdoc",
   slug: "2018/apple-drink-the-cider",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdoc"] },
 "2018/back-to-the-drawing-board.mdx": {
   id: "2018/back-to-the-drawing-board.mdx",
   slug: "2018/back-to-the-drawing-board",
@@ -145,13 +154,13 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] },
-"2018/elementary-juno.mdx": {
-  id: "2018/elementary-juno.mdx",
+"2018/elementary-juno.mdoc": {
+  id: "2018/elementary-juno.mdoc",
   slug: "2018/elementary-juno",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdoc"] },
 "2018/getting-on-with-gutenberg.mdx": {
   id: "2018/getting-on-with-gutenberg.mdx",
   slug: "2018/getting-on-with-gutenberg",
@@ -481,13 +490,13 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] },
-"2022/writing-path.mdx": {
-  id: "2022/writing-path.mdx",
+"2022/writing-path.mdoc": {
+  id: "2022/writing-path.mdoc",
   slug: "2022/writing-path",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdoc"] },
 },
 
 	};
