@@ -126,34 +126,34 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdoc"] },
-"2018/back-to-the-drawing-board.mdx": {
-  id: "2018/back-to-the-drawing-board.mdx",
+"2018/back-to-the-drawing-board.mdoc": {
+  id: "2018/back-to-the-drawing-board.mdoc",
   slug: "2018/back-to-the-drawing-board",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/baku-social.mdx": {
-  id: "2018/baku-social.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/baku-social.mdoc": {
+  id: "2018/baku-social.mdoc",
   slug: "2018/baku-social",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/deploying-controlling-chrome-intune.mdx": {
-  id: "2018/deploying-controlling-chrome-intune.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/deploying-controlling-chrome-intune.mdoc": {
+  id: "2018/deploying-controlling-chrome-intune.mdoc",
   slug: "2018/deploying-controlling-chrome-intune",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/deploying-sophos.mdx": {
-  id: "2018/deploying-sophos.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/deploying-sophos.mdoc": {
+  id: "2018/deploying-sophos.mdoc",
   slug: "2018/deploying-sophos",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdoc"] },
 "2018/elementary-juno.mdoc": {
   id: "2018/elementary-juno.mdoc",
   slug: "2018/elementary-juno",
@@ -161,335 +161,335 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdoc"] },
-"2018/getting-on-with-gutenberg.mdx": {
-  id: "2018/getting-on-with-gutenberg.mdx",
+"2018/getting-on-with-gutenberg.mdoc": {
+  id: "2018/getting-on-with-gutenberg.mdoc",
   slug: "2018/getting-on-with-gutenberg",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/intel-fail.mdx": {
-  id: "2018/intel-fail.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/intel-fail.mdoc": {
+  id: "2018/intel-fail.mdoc",
   slug: "2018/intel-fail",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/knit-and-perl.mdx": {
-  id: "2018/knit-and-perl.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/knit-and-perl.mdoc": {
+  id: "2018/knit-and-perl.mdoc",
   slug: "2018/knit-and-perl",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/new-site.mdx": {
-  id: "2018/new-site.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/new-site.mdoc": {
+  id: "2018/new-site.mdoc",
   slug: "2018/new-site",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/personal-matters.mdx": {
-  id: "2018/personal-matters.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/personal-matters.mdoc": {
+  id: "2018/personal-matters.mdoc",
   slug: "2018/personal-matters",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/pgp-problems.mdx": {
-  id: "2018/pgp-problems.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/pgp-problems.mdoc": {
+  id: "2018/pgp-problems.mdoc",
   slug: "2018/pgp-problems",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/some-more-windows-work.mdx": {
-  id: "2018/some-more-windows-work.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/some-more-windows-work.mdoc": {
+  id: "2018/some-more-windows-work.mdoc",
   slug: "2018/some-more-windows-work",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/teams-deployment-headaches.mdx": {
-  id: "2018/teams-deployment-headaches.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/teams-deployment-headaches.mdoc": {
+  id: "2018/teams-deployment-headaches.mdoc",
   slug: "2018/teams-deployment-headaches",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/thermy.mdx": {
-  id: "2018/thermy.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/thermy.mdoc": {
+  id: "2018/thermy.mdoc",
   slug: "2018/thermy",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2018/uncontrolled-devices.mdx": {
-  id: "2018/uncontrolled-devices.mdx",
+} & { render(): Render[".mdoc"] },
+"2018/uncontrolled-devices.mdoc": {
+  id: "2018/uncontrolled-devices.mdoc",
   slug: "2018/uncontrolled-devices",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/baku-social-news.mdx": {
-  id: "2019/baku-social-news.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/baku-social-news.mdoc": {
+  id: "2019/baku-social-news.mdoc",
   slug: "2019/baku-social-news",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/bring-back-my-internet.mdx": {
-  id: "2019/bring-back-my-internet.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/bring-back-my-internet.mdoc": {
+  id: "2019/bring-back-my-internet.mdoc",
   slug: "2019/bring-back-my-internet",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/coleslaw-migration.mdx": {
-  id: "2019/coleslaw-migration.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/coleslaw-migration.mdoc": {
+  id: "2019/coleslaw-migration.mdoc",
   slug: "2019/coleslaw-migration",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/going-free.mdx": {
-  id: "2019/going-free.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/going-free.mdoc": {
+  id: "2019/going-free.mdoc",
   slug: "2019/going-free",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/goodbye-guix.mdx": {
-  id: "2019/goodbye-guix.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/goodbye-guix.mdoc": {
+  id: "2019/goodbye-guix.mdoc",
   slug: "2019/goodbye-guix",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/into-the-void.mdx": {
-  id: "2019/into-the-void.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/into-the-void.mdoc": {
+  id: "2019/into-the-void.mdoc",
   slug: "2019/into-the-void",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/matrix-is-here.mdx": {
-  id: "2019/matrix-is-here.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/matrix-is-here.mdoc": {
+  id: "2019/matrix-is-here.mdoc",
   slug: "2019/matrix-is-here",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/more-writing.mdx": {
-  id: "2019/more-writing.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/more-writing.mdoc": {
+  id: "2019/more-writing.mdoc",
   slug: "2019/more-writing",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/moving-to-sphinx.mdx": {
-  id: "2019/moving-to-sphinx.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/moving-to-sphinx.mdoc": {
+  id: "2019/moving-to-sphinx.mdoc",
   slug: "2019/moving-to-sphinx",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/new-developments.mdx": {
-  id: "2019/new-developments.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/new-developments.mdoc": {
+  id: "2019/new-developments.mdoc",
   slug: "2019/new-developments",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/progress.mdx": {
-  id: "2019/progress.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/progress.mdoc": {
+  id: "2019/progress.mdoc",
   slug: "2019/progress",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/say-no-to-slack.mdx": {
-  id: "2019/say-no-to-slack.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/say-no-to-slack.mdoc": {
+  id: "2019/say-no-to-slack.mdoc",
   slug: "2019/say-no-to-slack",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/tanukitunes-update.mdx": {
-  id: "2019/tanukitunes-update.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/tanukitunes-update.mdoc": {
+  id: "2019/tanukitunes-update.mdoc",
   slug: "2019/tanukitunes-update",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2019/weeabot.mdx": {
-  id: "2019/weeabot.mdx",
+} & { render(): Render[".mdoc"] },
+"2019/weeabot.mdoc": {
+  id: "2019/weeabot.mdoc",
   slug: "2019/weeabot",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/a-new-year.mdx": {
-  id: "2020/a-new-year.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/a-new-year.mdoc": {
+  id: "2020/a-new-year.mdoc",
   slug: "2020/a-new-year",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/alpine.mdx": {
-  id: "2020/alpine.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/alpine.mdoc": {
+  id: "2020/alpine.mdoc",
   slug: "2020/alpine",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/building-smarter.mdx": {
-  id: "2020/building-smarter.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/building-smarter.mdoc": {
+  id: "2020/building-smarter.mdoc",
   slug: "2020/building-smarter",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/burnout.mdx": {
-  id: "2020/burnout.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/burnout.mdoc": {
+  id: "2020/burnout.mdoc",
   slug: "2020/burnout",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/going-green.mdx": {
-  id: "2020/going-green.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/going-green.mdoc": {
+  id: "2020/going-green.mdoc",
   slug: "2020/going-green",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/in-defence-of-gnome-web.mdx": {
-  id: "2020/in-defence-of-gnome-web.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/in-defence-of-gnome-web.mdoc": {
+  id: "2020/in-defence-of-gnome-web.mdoc",
   slug: "2020/in-defence-of-gnome-web",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/learning-freebsd.mdx": {
-  id: "2020/learning-freebsd.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/learning-freebsd.mdoc": {
+  id: "2020/learning-freebsd.mdoc",
   slug: "2020/learning-freebsd",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/more-speed.mdx": {
-  id: "2020/more-speed.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/more-speed.mdoc": {
+  id: "2020/more-speed.mdoc",
   slug: "2020/more-speed",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/moving-to-freebsd.mdx": {
-  id: "2020/moving-to-freebsd.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/moving-to-freebsd.mdoc": {
+  id: "2020/moving-to-freebsd.mdoc",
   slug: "2020/moving-to-freebsd",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/plan-9-fun.mdx": {
-  id: "2020/plan-9-fun.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/plan-9-fun.mdoc": {
+  id: "2020/plan-9-fun.mdoc",
   slug: "2020/plan-9-fun",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/playing-with-ports.mdx": {
-  id: "2020/playing-with-ports.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/playing-with-ports.mdoc": {
+  id: "2020/playing-with-ports.mdoc",
   slug: "2020/playing-with-ports",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/python-programming.mdx": {
-  id: "2020/python-programming.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/python-programming.mdoc": {
+  id: "2020/python-programming.mdoc",
   slug: "2020/python-programming",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/roswell-for-everyone.mdx": {
-  id: "2020/roswell-for-everyone.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/roswell-for-everyone.mdoc": {
+  id: "2020/roswell-for-everyone.mdoc",
   slug: "2020/roswell-for-everyone",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/site-speed-improvements.mdx": {
-  id: "2020/site-speed-improvements.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/site-speed-improvements.mdoc": {
+  id: "2020/site-speed-improvements.mdoc",
   slug: "2020/site-speed-improvements",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2020/walled-gardens.mdx": {
-  id: "2020/walled-gardens.mdx",
+} & { render(): Render[".mdoc"] },
+"2020/walled-gardens.mdoc": {
+  id: "2020/walled-gardens.mdoc",
   slug: "2020/walled-gardens",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2021/brave-browser.mdx": {
-  id: "2021/brave-browser.mdx",
+} & { render(): Render[".mdoc"] },
+"2021/brave-browser.mdoc": {
+  id: "2021/brave-browser.mdoc",
   slug: "2021/brave-browser",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2021/dell-xps-13-thoughts.mdx": {
-  id: "2021/dell-xps-13-thoughts.mdx",
+} & { render(): Render[".mdoc"] },
+"2021/dell-xps-13-thoughts.mdoc": {
+  id: "2021/dell-xps-13-thoughts.mdoc",
   slug: "2021/dell-xps-13-thoughts",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2021/finally-change.mdx": {
-  id: "2021/finally-change.mdx",
+} & { render(): Render[".mdoc"] },
+"2021/finally-change.mdoc": {
+  id: "2021/finally-change.mdoc",
   slug: "2021/finally-change",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2021/july-update.mdx": {
-  id: "2021/july-update.mdx",
+} & { render(): Render[".mdoc"] },
+"2021/july-update.mdoc": {
+  id: "2021/july-update.mdoc",
   slug: "2021/july-update",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2021/m1-mac.mdx": {
-  id: "2021/m1-mac.mdx",
+} & { render(): Render[".mdoc"] },
+"2021/m1-mac.mdoc": {
+  id: "2021/m1-mac.mdoc",
   slug: "2021/m1-mac",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2021/the-hunt.mdx": {
-  id: "2021/the-hunt.mdx",
+} & { render(): Render[".mdoc"] },
+"2021/the-hunt.mdoc": {
+  id: "2021/the-hunt.mdoc",
   slug: "2021/the-hunt",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2022/automation-fun.mdx": {
-  id: "2022/automation-fun.mdx",
+} & { render(): Render[".mdoc"] },
+"2022/automation-fun.mdoc": {
+  id: "2022/automation-fun.mdoc",
   slug: "2022/automation-fun",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
-"2022/fediverse.mdx": {
-  id: "2022/fediverse.mdx",
+} & { render(): Render[".mdoc"] },
+"2022/fediverse.mdoc": {
+  id: "2022/fediverse.mdoc",
   slug: "2022/fediverse",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] },
+} & { render(): Render[".mdoc"] },
 "2022/writing-path.mdoc": {
   id: "2022/writing-path.mdoc",
   slug: "2022/writing-path",

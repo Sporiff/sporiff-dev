@@ -13,8 +13,6 @@ tags:
 description: This post is more of a rant than anything technical. In fact, it's more of a moan born of recent frustrations. Nevertheless, this is my website. Where better to moan?
 ---
 
-import { YouTube } from 'astro-embed'
-
 This post is more of a rant than anything technical. In fact, it's more of a moan born of recent frustrations. Nevertheless, this is my website. Where better to moan?
 
 I've recently started a new job working for a software company. My day-to-day work mostly includes rifling through SQL databases and making changes as well as searching for causes of issues faced by customers. This job has me using a work-issued MacBook Air and a copy of Windows 10 running in a virtual machine. It's the setup used by every employee of the company bar one tester, who gets to use GNU/Linux.
@@ -35,23 +33,20 @@ I became inspired to start looking into my workflow after reading a book called 
 
 The first step I took was to address exactly what was wrong. My MacBook gave me my first hint at some of the issues I needed to address in my daily life:
 
-1. Things on computers are unnecessarily slow. Transitions between workspaces on macOS are frustratingly sluggish. Mouse navigation is pointlessly inaccurate and tedious. I need to get rid of the mouse and any annoying transitions. OK. But when I started looking around for ways to disable these obnoxiously slow animations, my results were threadbare and the result was just a way to "reduce motion sickness"[^1] and so the speed issue remains.
+1. Things on computers are unnecessarily slow. Transitions between workspaces on macOS are frustratingly sluggish. Mouse navigation is pointlessly inaccurate and tedious. I need to get rid of the mouse and any annoying transitions. OK. But when I started looking around for ways to disable these obnoxiously slow animations, my results were threadbare and the result was just a way to "reduce motion sickness" and so the speed issue remains.
 2. Keyboard control on both macOS and Windows is pitiful. So much focus is put on the mouse that navigating the OS without it,while possible, is like fighting a honey badger in a pool of molasses. I need to have more control with the keyboard because I find mouse navigation annoying.
 3. macOS Mojave introduced a dark mode recently, as did Windows 10. However, both of these things are useless if the stock apps used are still light and unable to be changed by system-level themes. Web browsers and office programs are particularly at fault here. So I need to do away with both wherever possible.
 
 This realisation led me to ricing boards and eventually to [Luke Smith](https://lukesmith.xyz), whose video demonstrating him shaving a few milliseconds off a BASH script greatly impressed me. His setup looked largely ideal, and since he is kind enough to distribute it, I put Arch back on my machine and gave it a shot. After a few hours with the manual I was able to go through everything and make the changes that made it feel more sensible to me. The whole process took me just one evening with the right base and mindset.
 
-<YouTube id="bkgeFi4PwOg" />
+{% youtube id="bkgeFi4PwOg" /%}
 
 ## Why does this matter?
 
 So back to the point at hand. My setup is the result of wanting my computer to do better for me than a default OS setup will do. Given the opportunity to sit down and simply _look_ at what I was doing with a computer I now have a setup that allows me to spend less time on the computer simply because I have got everything done much faster than I would have done. Can other people use my computer? Sure, but they would have to work how I work for it to make sense.
 
-Computers are, at this point in time, being produced for all people to use[^2] and as such are tailored to nobody. Worse yet, systems like Windows and macOS really don't give you the tools you need to make your experience better. It's a bit like walking into a hardware store looking for a screwdriver and all they have is hammers. Sure, you can get the work done, but it will be inefficient and ugly. But imagine if you were given a toolbox from which you could pick. Given a couple of hours of work and reading, you can wrangle BSD and GNU/Linux to be just that.
+Computers are, at this point in time, being produced for all people to use and as such are tailored to nobody. Worse yet, systems like Windows and macOS really don't give you the tools you need to make your experience better. It's a bit like walking into a hardware store looking for a screwdriver and all they have is hammers. Sure, you can get the work done, but it will be inefficient and ugly. But imagine if you were given a toolbox from which you could pick. Given a couple of hours of work and reading, you can wrangle BSD and GNU/Linux to be just that.
 
 I would encourage more people to have _personal_ computers. I think the idea of each computer being set up specifically for its user while all software works interoperably so that ideas can still be communicated is a wonderful notion. What we have at the moment is total homogeny and a societal contempt for anybody who defies it. Mac users are the worst of the bunch in this regard, accepting Apple's vision of workflow unflinchingly and unquestioningly. I should know, I was/am one by necessity. But Apple's workflow is horrendous, designed to keep you _on_ the computer rather than allow you to complete work _with_ the computer. The distinction is important and becomes abundantly clear once you move yourself over to a system which you have tailored to your needs.
 
 If a computer works exactly how you expect it to, ask yourself why you expect it to work that way. Is it because it's what makes the most sense to you, or is it because it's simply what has been presented to you before? Think about what frustrates you while you use it and how you might address those problems. You may be surprised at what you come up with.
-
-[^1]: By the by, Apple, you have utterly failed at design if your system is known to cause motion sickness by default.
-[^2]: Although I'm sure many people with disabilities would disagree

@@ -13,15 +13,13 @@ tags:
 description: At the moment, information on this flaw is scarce, so as always it’s best to wait until the paper is published. However, there are some things we can clear up from the start.
 ---
 
-import { Tweet } from 'astro-embed'
-
 ## Let’s clear up some FUD
 
 At the moment, information on this flaw is scarce, so as always it’s best to wait until the paper is published (which EFF says will be done at 07:00 UTC on May 15th). However, there are some things we can clear up from the start.
 
 Firstly, it does not look like this is a flaw with PGP itself, but rather with implementations of GPG used in email programs such as Enigmail. Both GPG and PGP remain cryptographically sound from what is being said by security experts, so there’s no need to worry that the sky is falling down. The official GPG Twitter account tweeted the following message:
 
-<Tweet id="995931083584757760" />
+{% tweet id="995931083584757760" /%}
 
 But as always, it is best to wait for the whitepaper to be released.
 
@@ -33,11 +31,11 @@ Let’s face it: PGP email sucks. From the information available today, it looks
 
 CSO Online is keeping up-to-date with the issue on their blog, and have given a far better breakdown of the issue than I can. At this point, all we can do is wait for tomorrow and see what the responsible parties have to say on the matter. I would say, however, that this disclosure has been handled atrociously. There has already been far too much panic over something which has an unknown impact, and perhaps has already been mitigated in some circumstances.
 
-<Tweet id="995929684750815233" />
+{% tweet id="995929684750815233" /%}
 
 The researchers seem keen to keep the matter under wraps until the release of the whitepaper, so it will be interesting to see what has been missed out come tomorrow.
 
-<Tweet id="995936859980222464" />
+{% tweet id="995936859980222464" /%}
 
 ### Update
 
@@ -45,11 +43,11 @@ The researchers seem keen to keep the matter under wraps until the release of th
 
 Security researcher Matthew Green has started a thread on Twitter detailling some of his thoughts on the attack. It's very much worth a read and he does an excellent job of breaking down the vulnerability into layman's terms.
 
-<Tweet id="995989254143606789" />
+{% tweet id="995989254143606789" /%}
 
 Essentially, it looks as though the vulnerability allows attackers to modify encrypted email and add malicious HTML code to it, which is then executed on the receiver's computer, allowing the text of the email to be sent to remote servers. This is quite a glaring problem, and seems to be on the part of the email plugins not detecting the attack and failing to act on it rather than the protocol itself being broken.
 
-<Tweet id="995993446283382784" />
+{% tweet id="995993446283382784" /%}
 
 The thread goes on to elaborate that PGP is less an issue here than S/MIME, a more widely used protocol which is also vulnerable to attack. This should really have been the meat of the story, as PGP is largely used by a small subset of people while S/MIME is trusted in a lot of critical environments.
 

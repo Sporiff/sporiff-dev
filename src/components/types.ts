@@ -27,13 +27,13 @@ interface Links {
    url: string;
 }
 
-interface File {
+export interface File {
    name: string;
    icon?: string;
    description?: string;
    links: Array<Links>;
 }
 
-export interface LinkList {
+export interface ListContent {
    list: Array<File>;
 }

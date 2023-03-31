@@ -23,7 +23,7 @@ After getting everything set up nice, my next adventure came with Nginx. I'm so 
 Then I decided to be an idiot. See, DO supplies a default `FreeBSD` account which is installed with your keys. This account has full root access using `sudo` and is meant to be used for access and maintenance of the server. But I'm an odd fellow, so I really wanted to set my account up to better match my other machines. I installed `zsh` and decided to `chsh` my account to change my username and shell. All went well, I moved my home folder and then left the shell to load my new shell. Everything loaded fine, but suddenly my site stopped working. Ah, I realised too late that of course the site is just a symlink from a folder in my home folder, which has now moved. Whoops. I'll just move that b-
 
 ```bash
-sporiff is not in the sudoers file
+$ sporiff is not in the sudoers file
 ```
 
 If you change your username, make sure you also change your sudoers file. Fool.
