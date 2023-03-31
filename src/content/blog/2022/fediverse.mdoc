@@ -10,15 +10,9 @@ image: /images/fediverse.webp
 alt: The Fediverse logo
 ---
 
-import { Notification } from "accessible-astro-components";
-import LinkList from "@components/LinkList.astro";
-import { Icon } from "astro-icon";
-import donation_links from "@data/donation_links.json";
-
-<Notification type="info">
-  <Icon name="ion:reader-outline" />
-  **Note**: I help maintain the [Funkwhale project](https://funkwhale.audio), so I'm pretty biased in favor of Fediverse software.
-</Notification>
+{% admonition type="info" icon="ion:reader-outline" %}
+**Note**: I help maintain the [Funkwhale project](https://funkwhale.audio), so I'm pretty biased in favor of Fediverse software.
+{% /admonition %}
 
 There's been a lot more conversation about the Fediverse recently. Elon Musk paid $44bn to advertise Fediverse services, particularly Mastodon, when he acquired Twitter just to flush what little good reputation it had down the proverbial toilet. There have been some enthusiastic adopters, some reluctant ones, and some determined to sink with their first ship rather than make the jump. Before I go forward, I just want to acknowledge that all of these are valid takes given the situation. This is just a post to quickly outline my thoughts on the matter.
 
@@ -75,4 +69,4 @@ Obviously, this lack of monetization is not without its caveats. Users need to d
 
 I'm going to leave links here for you to go and donate to any projects you want to see get better. Please consider showing your support!
 
-<LinkList list={donation_links}></LinkList>
+{% linklist /%}

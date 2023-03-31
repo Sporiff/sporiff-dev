@@ -1,7 +1,21 @@
 ---
-import type { LinkList } from "./types";
+interface Links {
+   name: string;
+   url: string;
+}
 
-const { list } = Astro.props as LinkList;
+interface File {
+   name: string;
+   icon?: string;
+   description?: string;
+   links: Array<Links>;
+}
+
+export interface ListContent {
+   list: Array<File>;
+}
+
+import list from "@data/donation_links.json"
 ---
 
 <div class="w-full not-prose">
