@@ -6,7 +6,7 @@ import YouTubeEmbed from "./src/components/YouTubeEmbed.astro";
 import YouTube from "./src/components/YouTube.astro";
 import Video from "./src/components/Video.astro";
 import Tweet from "./src/components/Tweet.astro";
-import CiteQuote from "./src/components/CiteQuote.astro";
+import CiteQuote from "./src/components/Citequote.astro";
 
 export default defineMarkdocConfig({
   tags: {
