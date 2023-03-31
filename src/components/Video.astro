@@ -1,5 +1,8 @@
 ---
-import type { Video } from "./types";
+interface Video {
+   link: string;
+   type: string
+}
 
 const { link, type } = Astro.props as Video;
 ---

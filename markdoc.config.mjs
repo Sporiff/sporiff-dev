@@ -1,14 +1,12 @@
 import { defineMarkdocConfig } from "@astrojs/markdoc/config";
-import {
-  Admonition,
-  LinkList,
-  Fence,
-  YouTubeEmbed,
-  CiteQuote,
-  YouTube,
-  Video,
-  Tweet,
-} from "./src/components/index";
+import Admonition from "./src/components/Admonition.astro";
+import LinkList from "./src/components/LinkList.astro";
+import Fence from "./src/components/Fence.astro";
+import YouTubeEmbed from "./src/components/YouTubeEmbed.astro";
+import YouTube from "./src/components/YouTube.astro";
+import Video from "./src/components/Video.astro";
+import Tweet from "./src/components/Tweet.astro";
+import CiteQuote from "./src/components/CiteQuote.astro";
 
 export default defineMarkdocConfig({
   tags: {
