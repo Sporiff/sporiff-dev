@@ -13,7 +13,7 @@
   "devDependencies": {
     "@astrojs/markdoc": "^0.1.1",
     "@astrojs/partytown": "^1.2.0",
-    "@astrojs/rss": "^2.3.1",
+    "@astrojs/rss": "^2.4.0",
     "@astrojs/tailwind": "^3.0.0",
     "@tailwindcss/typography": "^0.5.9",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
