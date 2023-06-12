@@ -11,7 +11,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/markdoc": "^0.3.2",
+    "@astrojs/markdoc": "^0.3.3",
     "@astrojs/partytown": "^1.2.3",
     "@astrojs/rss": "^2.4.3",
     "@astrojs/tailwind": "^3.1.3",
