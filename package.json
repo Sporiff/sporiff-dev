@@ -16,7 +16,7 @@
     "@astrojs/rss": "^2.4.3",
     "@astrojs/tailwind": "^4.0.0",
     "@tailwindcss/typography": "^0.5.9",
-    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^5.61.0",
     "accessible-astro-components": "^2.1.0",
     "astro": "^2.7.3",
